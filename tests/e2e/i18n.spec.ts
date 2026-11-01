@@ -2,7 +2,8 @@ import { test, expect, onboard, go } from './fixtures';
 
 /* Interface language: Russian (source) / English / Turkish. The choice is stored on the device ("pullup.lang"),
  * the first launch follows the browser language, and the main screens must not show Russian text in EN / TR. */
-const MAIN_SCREENS = ['home', 'train', 'plan', 'programs', 'mu', 'journal', 'stats', 'body', 'nutrition', 'calendar', 'achievements', 'settings'];
+const MAIN_SCREENS = ['home', 'train', 'plan', 'programs', 'mu', 'journal', 'stats', 'body', 'nutrition', 'calendar', 'achievements', 'settings',
+  'library', 'library/pullup', 'library/plank', 'library/pikepushup', 'group/pull', 'group/shoulders', 'group/core', 'group/muscleup'];
 // the language switcher itself stays in every language; "Иса" / "И" is the name typed by the user during onboarding (user data, never translated)
 const ALLOWED = new Set(['Русский', 'Язык', 'Language / Язык / Dil', 'Иса', 'И', 'ИСА']);
 const homeLink = (page: import('@playwright/test').Page, text: string) => page.locator('a[href="#/home"]', { hasText: text }).first();

@@ -10,7 +10,7 @@
 | Сборка web + API + бот | `npm run build` | успешно |
 | Юнит-тесты | `npm run test:unit` | **66 / 66** (8 файлов; среди них новые: /app, /privacy, команды, алиасы env) |
 | Интеграционные (PostgreSQL) | `npm run test:integration` | **40 / 40** (3 файла) |
-| E2E (Chrome + API + PostgreSQL) | `npm run test:e2e` | **32 / 32** (8 файлов, ≈2,6 мин; +5 тестов языка; ранее найден и исправлен выход календаря за экран на 320 px) |
+| E2E (Chrome + API + PostgreSQL) | `npm run test:e2e` | **32 / 32** (8 файлов, ≈2,6 мин; 5 тестов языка, включая 20 экранов и карточек каталога на EN и TR) |
 | Версия в одном файле | `npm run build:single` | успешно, 824 КБ |
 | Галерея скриншотов | `node tests/qa/gallery.mjs` | 85 экранов: 0 JS-ошибок, 0 выходов за ширину, 0 «NaN/undefined» |
 | Mini App (3 размера) | `npx tsx tests/qa/telegram-shots.ts` | сервер принял подпись initData: HTTP 200 ×3 |

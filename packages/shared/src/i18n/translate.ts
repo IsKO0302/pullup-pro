@@ -39,6 +39,10 @@ export function makeTranslator(dict: Dict): Translator {
         const parts = s.split(' · '), out = parts.map(x => core(x, depth + 1));
         if (out.some((x, i) => x !== parts[i])) return out.join(' · ');
       }
+      if (s.includes(', ')) {                                   // "Широчайшие, Бицепс": a list — only when EVERY part is known
+        const parts = s.split(', '), out = parts.map(x => core(x, depth + 1));
+        if (out.every((x, i) => x !== parts[i])) return out.join(', ');
+      }
       const m = LEAD_NUM.exec(s);
       if (m) { const rest = core(m[2], depth + 1); if (rest !== m[2]) return `${m[1]} ${rest}`; }
     }
