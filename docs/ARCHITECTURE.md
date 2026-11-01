@@ -81,6 +81,7 @@ Service worker генерируется при сборке (`apps/web/vite.conf
 ## Сборка и запуск
 
 - Клиент: `vite build` → `apps/web/dist` (+ `sw.js`, `version.json`).
+- Версия в одном файле: `scripts/single-file.mjs` встраивает JS, CSS и иконки из `apps/web/dist` в `dist-single/PULLUP-PRO-2.0.0.html` (без манифеста и service worker; `isSingleFile()` в `services/pwa.ts` отключает PWA и синхронизацию).
 - API и бот: `scripts/bundle.mjs` (esbuild) собирает каждый сервис в один ESM-файл; пакеты `@pullup/*` встраиваются, npm-зависимости ставятся `npm ci --omit=dev`.
 - API раздаёт `apps/web/dist` (или каталог из `WEB_DIST`) с fallback на `index.html`, применяет миграции и зеркалирует каталог при старте.
 

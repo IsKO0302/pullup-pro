@@ -20,6 +20,7 @@
     "dev:bot": "npm run dev -w @pullup/telegram-bot",
     "build": "npm run build -w @pullup/web && npm run build -w @pullup/api && npm run build -w @pullup/telegram-bot",
     "build:web": "npm run build -w @pullup/web",
+    "build:single": "npm run build:web && node scripts/single-file.mjs",
     "preview": "npm run preview -w @pullup/web",
     "start:api": "npm run start -w @pullup/api",
     "start:bot": "npm run start -w @pullup/telegram-bot",
@@ -28,7 +29,7 @@
     "test": "vitest run",
     "test:unit": "vitest run --project unit",
     "test:integration": "vitest run --project integration",
-    "pretest:e2e": "npm run build:web && npm run build -w @pullup/api",
+    "pretest:e2e": "npm run build:web && node scripts/single-file.mjs && npm run build -w @pullup/api",
     "test:e2e": "playwright test",
     "test:all": "npm run typecheck && npm run test && npm run test:e2e",
     "docs:sources": "tsx scripts/docs-sources.ts"

@@ -16,7 +16,7 @@ import { deleteCloudAccount, linkPoll, linkStart, serverConfig, setPhotoConsent,
 import { ApiError, api, apiAvailable, auth } from '../../services/api';
 import { idb, persistStorage, storageEstimate } from '../../services/idb';
 import { LG } from '../../services/logic';
-import { checkForUpdate, installState, iosGuide } from '../../services/pwa';
+import { checkForUpdate, installState, iosGuide, isSingleFile } from '../../services/pwa';
 import { SNAP_NAME, dropSnapshot, getSnapshot, listSnapshots, snapshot, type SnapKind } from '../../services/snapshots';
 import { SYNC, onSync, setCloud, syncErrorToast, syncNow, syncPhotos } from '../../services/sync';
 import { TG, tgOpenLink } from '../../services/telegram';
@@ -43,7 +43,7 @@ ROUTES.settings = {
   render() {
     const p = S.profile, st = S.settings, vibOk = 'vibrate' in navigator, wlOk = 'wakeLock' in navigator, acc = p.accent || 'orange';
     return pageHead('Настройки', 'Тренировка, оформление, синхронизация, напоминания и данные. Без входа всё работает локально на этом устройстве.', '', 'SETTINGS') + `
-    ${isDemo() ? `<div class="note n-warn mb">${ico('sparkle')}<div class="grow"><b>Сейчас загружены ДЕМО-данные.</b> Это пример, а не ваши тренировки; синхронизация на паузе.</div><button class="btn btn-sm" data-act="demoExit">${ico('refresh')}Вернуть мои данные</button></div>` : ''}
+    ${isDemo() ? `<div class="note n-warn note-act mb">${ico('sparkle')}<div class="grow"><b>Сейчас загружены ДЕМО-данные.</b> Это пример, а не ваши тренировки; синхронизация на паузе.</div><button class="btn btn-sm" data-act="demoExit">${ico('refresh')}Вернуть мои данные</button></div>` : ''}
     <div class="grid g2">
       <div class="card stack l"><div class="card-head" style="margin:0"><h3>${ico('user')}Профиль</h3><a class="hint link-btn" href="#/profile">Открыть</a></div>
         <a class="row side-prof" href="#/profile" style="gap:12px">${avatar('lg')}<div class="grow" style="min-width:0"><b class="ell">${esc(displayName())}</b><div class="small muted">${LEVEL_NAME[userLevel(S as any)]} · ${fmtNum(+p.bodyweight || 0)} кг · ${p.weeklyTarget || 3} трен./нед.</div></div>${ico('right', 'muted')}</a>
@@ -130,6 +130,7 @@ function installView() {
   const s = installState();
   if (s === 'installed') return `<div class="note n-ok">${ico('check')}<div class="small">PULLUP PRO установлено как приложение и работает офлайн.</div></div>`;
   if (TG.active) return `<div class="small tx2">Вы в Telegram Mini App. Чтобы установить PULLUP PRO на главный экран, откройте приложение в браузере.</div>`;
+  if (isSingleFile()) return `<div class="small tx2">Открыта версия в одном файле: она работает без интернета прямо с диска. Установка на главный экран доступна, когда приложение открыто по адресу https://… (сайт или сервер PULLUP PRO).</div>`;
   return `<div class="small tx2">Установите PULLUP PRO на главный экран: отдельное окно, быстрый запуск и работа без интернета.</div>
     ${s === 'prompt' ? `<button class="btn btn-acc" data-act="pwaInstall">${ico('install')}INSTALL PULLUP PRO</button>` : s === 'ios' ? `<button class="btn btn-acc" data-act="iosGuide">${ico('install')}Как установить на iPhone</button>` :
       `<div class="tiny muted">Chrome / Edge: значок установки в адресной строке или меню → «Установить приложение». Android: меню браузера → «Добавить на главный экран».</div>`}`;
@@ -317,6 +318,10 @@ async function fillSync(view) {
   const el = $('#sync-box', view), stEl = $('#sync-st', view); if (!el) return;
   const a = auth.get();
   if (stEl) stEl.textContent = a ? `статус: ${STATUS_NAME[SYNC.status] || SYNC.status}` : 'локальный режим';
+  if (isSingleFile()) {
+    el.innerHTML = `<div class="note n-acc">${ico('info')}<div class="small">Версия в одном файле: все данные хранятся только в этом браузере на этом устройстве. Синхронизация между устройствами, вход через Telegram и напоминания бота работают, когда приложение открыто с сервера PULLUP PRO. Перенести данные можно кнопками «Экспорт JSON» и «Импорт» в блоке «Данные».</div></div>`;
+    return;
+  }
   const ok = await apiAvailable();
   if (!el.isConnected) return;
   if (!ok) {

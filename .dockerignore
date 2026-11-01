@@ -9,3 +9,4 @@ legacy
 .env.*
 !.env.example
 .git
+dist-single

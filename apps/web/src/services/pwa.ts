@@ -14,6 +14,8 @@ export const onPwaChange = (f: () => void) => listeners.push(f);
 export const isStandalone = (): boolean => !!(window.matchMedia && window.matchMedia('(display-mode: standalone)').matches) || (navigator as any).standalone === true;
 export const isIOS = (): boolean => /iphone|ipad|ipod/i.test(navigator.userAgent) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
 export const inTelegramWebView = (): boolean => document.body.classList.contains('in-tg');
+/** single-file build (scripts/single-file.mjs) or a page opened from disk: no service worker, no install, no server */
+export const isSingleFile = (): boolean => location.protocol === 'file:' || document.documentElement.dataset.build === 'single';
 export type InstallState = 'installed' | 'prompt' | 'ios' | 'manual';
 export function installState(): InstallState {
   if (isStandalone()) return 'installed';
@@ -27,7 +29,7 @@ window.addEventListener('appinstalled', () => { deferred = null; S.ui.installDis
 /** dashboard banner: shown only when installation is actually possible and not dismissed */
 export function installBanner(): string {
   const st = installState();
-  if (inTelegramWebView() || st === 'installed' || st === 'manual' || S.ui.installDismissed) return '';
+  if (inTelegramWebView() || isSingleFile() || st === 'installed' || st === 'manual' || S.ui.installDismissed) return '';
   return `<div class="install-banner" role="region" aria-label="Установка приложения"><span class="li-ico acc">${ico('install')}</span>
     <div class="grow"><b>Установите PULLUP PRO</b><div class="small muted">Иконка на экране, полноэкранный режим и работа без интернета.</div></div>
     <button class="btn btn-acc btn-sm" data-act="pwaInstall">${ico('install')}INSTALL PULLUP PRO</button>
@@ -73,7 +75,7 @@ ACT.pwaUpdate = () => {
   setTimeout(() => location.reload(), 4000);   // fallback if the browser does not report controllerchange
 };
 export function registerSW() {
-  if (!('serviceWorker' in navigator) || !import.meta.env.PROD || location.protocol === 'file:') return;
+  if (!('serviceWorker' in navigator) || !import.meta.env.PROD || isSingleFile()) return;
   // reload only when an updated worker takes over an already controlled page; the very first install
   // (clients.claim() of the first worker) only takes control of the open page and needs no reload
   let reloading = false, hadController = !!navigator.serviceWorker.controller;
