@@ -5,7 +5,9 @@ import { pageHead, segBtns, setSeg } from '../../components/view';
 import { AUD, buzz } from '../../core/audio';
 import { $, download, numVal } from '../../core/dom';
 import { ACT } from '../../core/events';
+import { chooseLang } from '../../core/i18n';
 import { ico } from '../../core/icons';
+import { LANGS, LANG_NAME, getLang, numLocale, type Lang } from '@pullup/shared/i18n/locale';
 import { ROUTES, go, render, rerender } from '../../core/router';
 import { S, STORAGE_OK, defaultState, runStore, save, setState, storageSize } from '../../core/state';
 import { applyTheme } from '../../core/theme';
@@ -34,7 +36,7 @@ import { strToU8, zipSync } from 'fflate';
 /* ================= Settings 2.0: training, design, sync & account, reminders, install, data ================= */
 const REM_KIND: [Reminder['kind'], string][] = [['workout', 'Тренировка'], ['weight', 'Взвешивание'], ['water', 'Вода'], ['mobility', 'Мобилити']];
 const tz = () => { try { return Intl.DateTimeFormat().resolvedOptions().timeZone || 'UTC'; } catch (e) { return 'UTC'; } };
-const fmtTime = (ms: number) => ms ? new Date(ms).toLocaleString('ru-RU', { day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit' }) : '—';
+const fmtTime = (ms: number) => ms ? new Date(ms).toLocaleString(numLocale(), { day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit' }) : '—';
 const sw = (o: string, f: string, t: string, sub = '', on = false, dis = false) => `<label class="switch"><input type="checkbox" data-chg="setSw" data-o="${o}" data-f="${f}" ${on ? 'checked' : ''} ${dis ? 'disabled' : ''}><i></i><span><b class="small">${t}</b>${sub ? `<span class="tiny muted" style="display:block">${sub}</span>` : ''}</span></label>`;
 export const isDemo = (): boolean => !!(S.meta && (S.meta as any).demo);
 
@@ -50,6 +52,7 @@ ROUTES.settings = {
         <div class="row wrap"><button class="btn btn-sm" data-act="profEdit">${ico('edit')}Изменить профиль</button><button class="btn btn-sm btn-ghost" data-act="reOnboard">${ico('refresh')}Персонализация заново</button></div>
       </div>
       <div class="card stack l"><div class="card-head" style="margin:0"><h3>${ico('sparkle')}Оформление</h3></div>
+        <div class="field"><span>Language / Язык / Dil</span>${segBtns('setLang', LANGS.map(l => [l, LANG_NAME[l]] as [string, string]), getLang(), 'style="flex-wrap:wrap"')}</div>
         <div class="field"><span>Тема</span>${segBtns('setTheme', [['dark', `${ico('moon')}Тёмная`], ['light', `${ico('sun')}Светлая`], ['system', `${ico('desktop')}Системная`]], st.theme || 'dark', 'style="flex-wrap:wrap"')}</div>
         <div class="field"><span>Акцентный цвет</span>${segBtns('setAcc', [['orange', '<i class="sw" style="background:#ff6a1a"></i>Orange Fire'], ['red', '<i class="sw" style="background:#ff3030"></i>Red Power'], ['custom', `<i class="sw" style="background:${esc(st.customAccent || '#2f8cff')}"></i>Свой`]], acc, 'style="flex-wrap:wrap"')}</div>
         ${acc === 'custom' ? `<label class="field"><span>Свой цвет</span><span class="row"><input type="color" class="color-inp" value="${esc(st.customAccent || '#2f8cff')}" data-inp="setAccColor" aria-label="Свой акцентный цвет"><span class="tiny muted">Цвет кнопок, графиков и прогресса</span></span></label>` : ''}
@@ -112,6 +115,7 @@ ACT.setSw = el => {
 };
 ACT.setRest = el => { S.profile.restDefault = +el.dataset.v; setSeg(el); save(); toast('Сохранено', 'ok', 1200); };
 ACT.setTheme = el => { S.settings.theme = el.dataset.v; save(); applyTheme(); rerender(); };
+ACT.setLang = el => chooseLang(el.dataset.v as Lang);
 ACT.setAcc = el => { S.profile.accent = el.dataset.v; if (el.dataset.v === 'custom' && !S.settings.customAccent) S.settings.customAccent = '#2f8cff'; save(); applyTheme(); rerender(); };
 let accT: any = 0;
 ACT.setAccColor = el => { if (!/^#[0-9a-f]{6}$/i.test(el.value)) return; S.settings.customAccent = el.value; applyTheme(); clearTimeout(accT); accT = setTimeout(() => save(), 400); };

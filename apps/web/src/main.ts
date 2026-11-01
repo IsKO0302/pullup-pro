@@ -26,6 +26,7 @@ import './features/onboarding/onboarding';
 import { confirmBox } from './components/modal';
 import { toast } from './components/toast';
 import { $ } from './core/dom';
+import { initI18n } from './core/i18n';
 import { ico } from './core/icons';
 import { CUR, render, rerender } from './core/router';
 import { MIGRATION, S, STORE_KEY, loadState, mirrorCandidate, save, setState } from './core/state';
@@ -52,6 +53,7 @@ if (import.meta.env.DEV) (window as any).__pullup = { S: () => S, ACT, render, d
   applyTheme(); watchSystemTheme();
   // Telegram Mini App: the SDK must read its launch parameters before the router touches the hash
   try { await initTelegram(); } catch (e) { console.warn('Telegram init failed', e); }
+  initI18n(TG.app?.initDataUnsafe?.user?.language_code);     // UI language only; identity always comes from the server-validated initData
   LG.checkAch(true);
   window.addEventListener('hashchange', () => render());
   if (!location.hash || location.hash === '#' || location.hash === '#/') history.replaceState(null, '', location.pathname + location.search + '#/home');

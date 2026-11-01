@@ -7,7 +7,7 @@ import type pg from 'pg';
 import * as db from '@pullup/db';
 import { recordsToState, type AppState, type Collection } from '@pullup/shared';
 import { zoned } from './tz';
-import { APP_MSG, HELP, LINK_MSG, NO_ACCOUNT, NO_WEBAPP, PRIVACY, PRIVATE_ONLY, SERVICE_DOWN, WELCOME, progressText, remindersText, settingsText, statsText, todayText } from './texts';
+import { LINK_MSG, NO_ACCOUNT, NO_WEBAPP, PRIVATE_ONLY, SERVICE_DOWN, localized, progressText, remindersText, settingsText, statsText, todayText } from './texts';
 
 export interface BotDeps { pool: pg.Pool; webAppUrl: string | null; defaultTz?: string; now?: () => Date; log?: (msg: string, err?: unknown) => void }
 
@@ -22,6 +22,12 @@ export const COMMANDS_EN = [
   { command: 'stats', description: 'Workout statistics' }, { command: 'progress', description: 'Weekly progress and strength changes' },
   { command: 'reminder', description: 'Reminders' }, { command: 'settings', description: 'Account and settings' },
   { command: 'privacy', description: 'Privacy information' }, { command: 'help', description: 'Help' }
+];
+
+export const COMMANDS_TR = [
+  { command: 'start', description: 'PULLUP PRO’yu başlat' }, { command: 'app', description: 'Uygulamayı aç' }, { command: 'today', description: 'Bugünün görevi ve antrenmanı' },
+  { command: 'stats', description: 'Antrenman istatistikleri' }, { command: 'progress', description: 'Hafta ve kuvvet değişimleri' }, { command: 'reminder', description: 'Hatırlatmalar' },
+  { command: 'settings', description: 'Hesap ve ayarlar' }, { command: 'privacy', description: 'Gizlilik bilgisi' }, { command: 'help', description: 'Yardım' }
 ];
 
 /** Mini App URL with a deep-link screen (?screen=train → the app opens #/train) */
@@ -72,9 +78,9 @@ export function createBot(token: string, deps: BotDeps, opts: { botInfo?: UserFr
       await ctx.reply(LINK_MSG[r], { ...html, reply_markup: r === 'ok' ? undefined : appButton(new InlineKeyboard(), deps.webAppUrl, 'Открыть PULLUP PRO', 'settings') });
       return;
     }
-    await ctx.reply(WELCOME + (hasApp ? '' : '\n\n' + NO_WEBAPP), { ...html, reply_markup: welcomeKb() });
+    await ctx.reply(localized('WELCOME', ctx.from?.language_code) + (hasApp ? '' : '\n\n' + NO_WEBAPP), { ...html, reply_markup: welcomeKb() });
   });
-  const help = guard(async ctx => { await ctx.reply(HELP, { ...html, reply_markup: appButton(new InlineKeyboard(), deps.webAppUrl, 'OPEN PULLUP PRO') }); });
+  const help = guard(async ctx => { await ctx.reply(localized('HELP', ctx.from?.language_code), { ...html, reply_markup: appButton(new InlineKeyboard(), deps.webAppUrl, 'OPEN PULLUP PRO') }); });
   const today = guard(async ctx => {
     const x = await stateOf(ctx); if (!x) return void (await noData(ctx));
     await ctx.reply(todayText(x.S, x.today), { ...html, reply_markup: appButton(new InlineKeyboard(), deps.webAppUrl, '▶ Открыть тренировку', 'train') });
@@ -98,8 +104,8 @@ export function createBot(token: string, deps: BotDeps, opts: { botInfo?: UserFr
     await ctx.reply(settingsText(x.S, { name: pu.name, username: x.user.username, photosConsent: x.user.photos_consent, lastChangeAt: lc.at, records: lc.records }, x.zone),
       { ...html, reply_markup: appButton(new InlineKeyboard(), deps.webAppUrl, '⚙️ Открыть настройки', 'settings') });
   });
-  const app = guard(async ctx => { await ctx.reply(APP_MSG + (hasApp ? '' : '\n\n' + NO_WEBAPP), { ...html, reply_markup: appButton(new InlineKeyboard(), deps.webAppUrl, 'OPEN PULLUP PRO') }); });
-  const privacy = guard(async ctx => { await ctx.reply(PRIVACY, { ...html, reply_markup: appButton(new InlineKeyboard(), deps.webAppUrl, '⚙️ Настройки и данные', 'settings') }); });
+  const app = guard(async ctx => { await ctx.reply(localized('APP_MSG', ctx.from?.language_code) + (hasApp ? '' : '\n\n' + NO_WEBAPP), { ...html, reply_markup: appButton(new InlineKeyboard(), deps.webAppUrl, 'OPEN PULLUP PRO') }); });
+  const privacy = guard(async ctx => { await ctx.reply(localized('PRIVACY', ctx.from?.language_code), { ...html, reply_markup: appButton(new InlineKeyboard(), deps.webAppUrl, '⚙️ Настройки и данные', 'settings') }); });
   const HANDLERS: Record<string, (ctx: Context) => Promise<void>> = { app, today, stats, progress, reminder, settings, privacy, help };
 
   bot.command('start', start);
@@ -147,6 +153,8 @@ export function createBot(token: string, deps: BotDeps, opts: { botInfo?: UserFr
 export async function setupBotProfile(bot: Bot, webAppUrl: string | null, log: (m: string) => void = console.log): Promise<void> {
   const tryIt = async (name: string, f: () => Promise<unknown>) => { try { await f(); } catch (e) { log(`[bot] ${name} failed: ${(e as Error).message}`); } };
   await tryIt('setMyCommands(ru)', () => bot.api.setMyCommands(COMMANDS_RU, { language_code: 'ru' }));
+  await tryIt('setMyCommands(tr)', () => bot.api.setMyCommands(COMMANDS_TR, { language_code: 'tr' }));
+  await tryIt('setMyDescription(tr)', () => bot.api.setMyDescription('PULLUP PRO — kişisel fitness koçu: planlı antrenmanlar, Muscle-Up, istatistikler, vücut ilerlemesi ve hatırlatmalar.', { language_code: 'tr' }));
   await tryIt('setMyCommands', () => bot.api.setMyCommands(COMMANDS_EN));
   await tryIt('setMyShortDescription', () => bot.api.setMyShortDescription('PULLUP PRO — your personal fitness journey starts here.'));
   await tryIt('setMyDescription(ru)', () => bot.api.setMyDescription('PULLUP PRO — персональный фитнес-тренер: тренировки по плану, Muscle-Up, статистика, прогресс тела и напоминания.', { language_code: 'ru' }));

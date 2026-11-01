@@ -35,6 +35,56 @@ export const PRIVACY = lines([
   '• Данные можно выгрузить (экспорт JSON) и удалить вместе с аккаунтом: <b>Настройки</b> → «Синхронизация и аккаунт».',
   '• Приложение не определяет процент жира по фото, не ставит диагнозов и не заменяет врача.'
 ]);
+/* ---------- static texts in the user's language (Telegram language_code: ru → Russian, tr → Turkish, any other → English; unknown → Russian) ---------- */
+export type BotLang = 'ru' | 'en' | 'tr';
+export function botLang(code?: string | null): BotLang {
+  const c = String(code || '').toLowerCase().slice(0, 2);
+  return !c || c === 'ru' ? 'ru' : c === 'tr' ? 'tr' : 'en';
+}
+const LOCAL = {
+  WELCOME: {
+    ru: WELCOME,
+    en: lines(['<b>PULLUP PRO</b>', '<b>POWER. DISCIPLINE. PROGRESS.</b>', '', 'Welcome to your personal fitness ecosystem.', 'Your training. Your progress. Your transformation.', '',
+      'Workout plans, Muscle-Up, an exercise library, statistics and body progress — right in Telegram.', 'Tap <b>OPEN PULLUP PRO</b> to open the app.']),
+    tr: lines(['<b>PULLUP PRO</b>', '<b>POWER. DISCIPLINE. PROGRESS.</b>', '', 'Kişisel fitness ekosisteminize hoş geldiniz.', 'Antrenmanınız. İlerlemeniz. Dönüşümünüz.', '',
+      'Planlı antrenmanlar, Muscle-Up, egzersiz kütüphanesi, istatistikler ve vücut ilerlemesi — doğrudan Telegram’da.', 'Uygulamayı açmak için <b>OPEN PULLUP PRO</b> düğmesine dokunun.'])
+  },
+  HELP: {
+    ru: HELP,
+    en: lines(['<b>PULLUP PRO commands</b>', '', '/app — open the app', '/today — today’s mission and workout', '/stats — workout statistics', '/progress — week and strength changes',
+      '/reminder — reminders in Telegram', '/settings — account and settings', '/privacy — privacy', '/help — this help', '',
+      'The bot shows data from the app once sync is on: PULLUP PRO → <b>Settings</b> → “Sync and account”.']),
+    tr: lines(['<b>PULLUP PRO komutları</b>', '', '/app — uygulamayı aç', '/today — bugünün görevi ve antrenmanı', '/stats — antrenman istatistikleri', '/progress — hafta ve kuvvet değişimleri',
+      '/reminder — Telegram hatırlatmaları', '/settings — hesap ve ayarlar', '/privacy — gizlilik', '/help — bu yardım', '',
+      'Bot, senkronizasyon açıldıktan sonra uygulamadaki verileri gösterir: PULLUP PRO → <b>Ayarlar</b> → “Senkronizasyon ve hesap”.'])
+  },
+  APP_MSG: {
+    ru: APP_MSG,
+    en: lines(['<b>PULLUP PRO</b>', 'Your training, progress and body changes — in one app.', 'Tap the button below to open it.']),
+    tr: lines(['<b>PULLUP PRO</b>', 'Antrenmanınız, ilerlemeniz ve vücut değişimleriniz — tek uygulamada.', 'Açmak için aşağıdaki düğmeye dokunun.'])
+  },
+  PRIVACY: {
+    ru: PRIVACY,
+    en: lines(['<b>PULLUP PRO privacy</b>', '',
+      '• By default workouts, measurements, nutrition and the profile are stored only <b>on the device</b>.',
+      '• Sync is optional: after signing in with Telegram your data is copied to the server and available only to you. The bot shows statistics only in a private chat.',
+      '• <b>Progress photos</b> stay on the device. They reach the cloud only after a separate consent; the consent can be withdrawn — the photos are then deleted from the server.',
+      '• Telegram gives the app your id, name and username — they are needed to sign in; the server verifies the authenticity of this data by Telegram’s signature.',
+      '• Reminders and reports arrive only if you turned them on, and can be turned off at any time.',
+      '• Your data can be exported (JSON) and deleted together with the account: <b>Settings</b> → “Sync and account”.',
+      '• The app does not estimate body fat from photos, does not diagnose and does not replace a doctor.']),
+    tr: lines(['<b>PULLUP PRO gizlilik</b>', '',
+      '• Varsayılan olarak antrenmanlar, ölçümler, beslenme ve profil yalnızca <b>cihazda</b> saklanır.',
+      '• Senkronizasyon isteğe bağlıdır: Telegram ile giriş yaptıktan sonra verileriniz sunucuya kopyalanır ve yalnızca size açıktır. Bot istatistikleri yalnızca özel sohbette gösterir.',
+      '• <b>İlerleme fotoğrafları</b> cihazda kalır. Buluta yalnızca ayrı bir onaydan sonra gider; onay geri çekilebilir — fotoğraflar sunucudan silinir.',
+      '• Telegram uygulamaya kimliğinizi, adınızı ve kullanıcı adınızı iletir — giriş için gereklidir; bu verilerin gerçekliği sunucuda Telegram imzasıyla doğrulanır.',
+      '• Hatırlatmalar ve raporlar yalnızca siz açarsanız gelir ve istediğiniz zaman kapatılabilir.',
+      '• Verileriniz dışa aktarılabilir (JSON) ve hesapla birlikte silinebilir: <b>Ayarlar</b> → “Senkronizasyon ve hesap”.',
+      '• Uygulama fotoğraflardan vücut yağı tahmin etmez, teşhis koymaz ve doktorun yerini tutmaz.'])
+  }
+} as const;
+/** a static bot text in the language of the Telegram user */
+export const localized = (key: keyof typeof LOCAL, code?: string | null): string => LOCAL[key][botLang(code)];
 export const NO_ACCOUNT = lines([
   'Данных из приложения пока нет.', '',
   'Чтобы бот показывал план и статистику, откройте PULLUP PRO → <b>Настройки</b> → «Синхронизация и аккаунт», войдите через Telegram и включите синхронизацию.'

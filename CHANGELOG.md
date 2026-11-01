@@ -11,6 +11,14 @@
 - Документы: `CLAUDE.md`, `PROJECT_STATUS.md`, `PROJECT_ROADMAP.md`, `docs/SECURITY.md`.
 - Галерея скриншотов `docs/screenshots/` и скрипты `tests/qa/gallery.mjs`, `tests/qa/telegram-shots.ts`.
 
+### i18n (русский / English / Türkçe)
+
+- Переключатель языка в Настройках, язык по умолчанию — по браузеру или Telegram; выбор хранится на устройстве (`pullup.lang`).
+- Перевод на лету всего интерфейса (текст, placeholder, title, aria-label, заголовок страницы), даты, числа и формы множественного числа по языку; словари EN/TR ≈1380 строк.
+- Бот: /start, /help, /app, /privacy на русском, английском и турецком по `language_code` пользователя; команды и описание для `tr`.
+- Инструменты: `tests/qa/i18n-coverage.mjs`; тесты `tests/unit/i18n.test.ts`, `tests/e2e/i18n.spec.ts`.
+- Известно: не переведены описания каталога упражнений и редкие состояния интерфейса (см. PROJECT_ROADMAP).
+
 ### Изменено
 
 - Приветствие бота приведено к тексту из плана: «POWER. DISCIPLINE. PROGRESS. / Welcome to your personal fitness ecosystem. / Your training. Your progress. Your transformation.»

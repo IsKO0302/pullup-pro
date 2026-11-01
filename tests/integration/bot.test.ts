@@ -52,6 +52,13 @@ describe.skipIf(!haveDb)('Telegram bot (grammY) with PostgreSQL', () => {
     const u = await db.getUserByTelegram(pool, isa.id);
     expect(u?.bot_started_at).toBeTruthy();
   });
+  it('/start and /privacy answer in the language of the Telegram user', async () => {
+    const tr = { id: 4343, first_name: 'Can', username: 'can_fit', language_code: 'tr' };
+    await bot.handleUpdate(command(tr, '/start')); await bot.handleUpdate(command(tr, '/privacy'));
+    const [a, b] = sent(calls).map(c => c.payload);
+    expect(a.text).toContain('hoş geldiniz'); expect(a.reply_markup.inline_keyboard[0][0].text).toBe('OPEN PULLUP PRO');
+    expect(b.text).toContain('gizlilik');
+  });
   it('/app: opens the Mini App with one web_app button; works without an account', async () => {
     await bot.handleUpdate(command({ id: 4242, first_name: 'New', username: 'new_user', language_code: 'en' }, '/app'));
     const m = sent(calls)[0].payload;
