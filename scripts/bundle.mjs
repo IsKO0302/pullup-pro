@@ -4,7 +4,7 @@
 // usage: node scripts/bundle.mjs <entry.ts> <out.js>   (paths relative to the repository root)
 import { build } from 'esbuild';
 import { fileURLToPath } from 'node:url';
-import { resolve } from 'node:path';
+import { isAbsolute, resolve } from 'node:path';
 
 const root = fileURLToPath(new URL('..', import.meta.url));
 const [entry, out] = process.argv.slice(2);
@@ -14,6 +14,8 @@ const externalDeps = {
   name: 'external-npm-deps',
   setup(b) {
     b.onResolve({ filter: /^[^./]/ }, args => {
+      // the entry point and absolute paths (e.g. "D:\\..." on Windows) are files, not npm packages
+      if (args.kind === 'entry-point' || isAbsolute(args.path)) return undefined;
       if (args.path.startsWith('@pullup/') || args.path.startsWith('node:')) return undefined;
       return { path: args.path, external: true };
     });
