@@ -7,7 +7,7 @@ import type pg from 'pg';
 import * as db from '@pullup/db';
 import { recordsToState, type Reminder } from '@pullup/shared';
 import { hmToMin, zoned } from './tz';
-import { REMINDER_SCREEN, reminderMessage } from './texts';
+import { REMINDER_SCREEN, inLang, loc, reminderMessage } from './texts';
 import { appButton } from './bot';
 
 export interface DueReminder { userId: string; telegramId: number; reminder: Reminder; day: string; zone: string }
@@ -36,8 +36,9 @@ export async function reminderTick(api: Api, pool: pg.Pool, o: TickOptions): Pro
     if (d.reminder.kind === 'workout' && await db.hasWorkoutOn(pool, d.userId, d.day)) { res.skipped++; continue; }
     try {
       const S = d.reminder.kind === 'workout' ? recordsToState(await db.liveRecords(pool, d.userId, ['profile', 'engine', 'progress'])) : null;
-      await api.sendMessage(d.telegramId, reminderMessage(d.reminder.kind, S), {
-        parse_mode: 'HTML', reply_markup: appButton(new InlineKeyboard(), o.webAppUrl, 'Открыть PULLUP PRO', REMINDER_SCREEN[d.reminder.kind] || 'home')
+      const lang = (await db.getUserByTelegram(pool, d.telegramId))?.language_code;        // the user's Telegram language
+      await api.sendMessage(d.telegramId, inLang(lang, () => reminderMessage(d.reminder.kind, S)), {
+        parse_mode: 'HTML', reply_markup: appButton(new InlineKeyboard(), o.webAppUrl, loc('Открыть PULLUP PRO', lang), REMINDER_SCREEN[d.reminder.kind] || 'home')
       });
       res.sent++;
     } catch (e) {

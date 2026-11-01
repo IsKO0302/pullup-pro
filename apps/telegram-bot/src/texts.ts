@@ -1,4 +1,8 @@
 /* ================= Bot messages (Telegram HTML). Pure functions over the synced AppState — never invent numbers ================= */
+import { EN } from '@pullup/shared/i18n/en';
+import { TR } from '@pullup/shared/i18n/tr';
+import { getLang, numLocale, setLang } from '@pullup/shared/i18n/locale';
+import { makeTranslator } from '@pullup/shared/i18n/translate';
 import {
   KEY_RESULTS, LEVEL_NAME, W, activeProgram, addDays, buildWorkout, dailyMission, dayKey, doseLabel, exOf, fmtDay, fmtDayShort, fmtDayW,
   fmtNum, fmtSec, nextIndex, parseDay, plural, strengthChanges, summary, userLevel, weekAdvice, weekReport, WD,
@@ -83,6 +87,24 @@ const LOCAL = {
       '• Uygulama fotoğraflardan vücut yağı tahmin etmez, teşhis koymaz ve doktorun yerini tutmaz.'])
   }
 } as const;
+/* ---------- dynamic texts: dates, numbers and plural forms follow the user's language (the shared helpers read a global
+ * language, so it is switched only while one — synchronous — text is built), the rest goes through the dictionary piece by piece
+ * (HTML tags are kept as they are) ---------- */
+const TRANSLATORS = { en: makeTranslator(EN), tr: makeTranslator(TR) };
+const translateHtml = (html: string, lang: 'en' | 'tr'): string => html.split(/(<[^>]*>)/).map(p => (p.startsWith('<') ? p : TRANSLATORS[lang](p))).join('');
+/** translates a ready Russian text / button label for a Telegram user (Russian stays as it is) */
+export function loc(text: string, code?: string | null): string {
+  const l = botLang(code);
+  return l === 'ru' ? text : translateHtml(text, l);
+}
+/** builds a text in the user's language: formatters switch to it, the result is translated */
+export function inLang(code: string | null | undefined, build: () => string): string {
+  const l = botLang(code);
+  if (l === 'ru') return build();
+  const prev = getLang();
+  setLang(l);
+  try { return translateHtml(build(), l); } finally { setLang(prev); }
+}
 /** a static bot text in the language of the Telegram user */
 export const localized = (key: keyof typeof LOCAL, code?: string | null): string => LOCAL[key][botLang(code)];
 export const NO_ACCOUNT = lines([
@@ -156,7 +178,7 @@ export function remindersText(S: AppState, zone: string): string {
 export interface SettingsInfo { name: string; username: string | null; photosConsent: boolean; lastChangeAt: string | null; records: number }
 export function settingsText(S: AppState, info: SettingsInfo, zone: string): string {
   const P = activeProgram(S), rem = (S.reminders || []).filter(r => r.enabled).length, on = !!(S.settings && S.settings.bot && S.settings.bot.reminders);
-  const at = info.lastChangeAt ? new Intl.DateTimeFormat('ru-RU', { timeZone: zone, day: 'numeric', month: 'long', hour: '2-digit', minute: '2-digit' }).format(new Date(info.lastChangeAt)) : '—';
+  const at = info.lastChangeAt ? new Intl.DateTimeFormat(numLocale(), { timeZone: zone, day: 'numeric', month: 'long', hour: '2-digit', minute: '2-digit' }).format(new Date(info.lastChangeAt)) : '—';
   return lines([
     '<b>Настройки</b>', '',
     `Аккаунт: <b>${h(info.name)}</b>${info.username ? ` (@${h(info.username)})` : ''}`,

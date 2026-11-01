@@ -25,6 +25,12 @@ describe('translation engine', () => {
     expect(t('Подтягивания · Турник')).toBe('Pull-ups · Pull-up bar');
     expect(t('12 Подтягивания')).toBe('12 Pull-ups');
   });
+  it('translates glued text phrase by phrase, but only when nothing Russian would be left', () => {
+    const g = makeTranslator({ 'Вес:': 'Weight:', 'кг': 'kg', 'Готово.': 'Done.', 'Данные сохранятся.': 'The data will be kept.' });
+    expect(g('Вес: 78,5 кг')).toBe('Weight: 78,5 kg');
+    expect(g('Готово. Данные сохранятся.')).toBe('Done. The data will be kept.');
+    expect(g('Вес: неизвестно')).toBe('Вес: неизвестно');
+  });
   it('leaves unknown text untouched (falls back to the Russian source)', () => {
     expect(t('Неизвестная строка')).toBe('Неизвестная строка');
     expect(t('')).toBe('');

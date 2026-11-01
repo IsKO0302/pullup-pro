@@ -20,10 +20,12 @@ export function makeTranslator(dict: Dict): Translator {
   const patterns: Pattern[] = Object.keys(dict).filter(k => k.includes('{')).sort((a, b) => b.length - a.length).map(k => {
     const names: string[] = [];
     // {a}…{h} stand for ONE short token (a number, a month name, a unit word); any other name captures a whole phrase
-    const src = esc(k).replace(/\\\{([a-z]+)\\\}/g, (_m, n: string) => { names.push(n); return /^[a-h]$/.test(n) ? '(\\S{1,16})' : '(.+?)'; });
+    const src = esc(k).replace(/\\\{([a-z]+)\\\}/g, (_m, n: string) => { names.push(n); return /^[a-h]$/.test(n) ? '([^\\sА-Яа-яЁё]{1,16})' : '(.+?)'; });
     return { re: new RegExp('^' + src + '$'), names, out: dict[k] };
   });
   const cache = new Map<string, string>();
+  let phraseRe: RegExp | null = null;
+  let numeric: { re: RegExp; out: string }[] | null = null;
 
   const core = (s: string, depth: number): string => {
     if (!s) return s;
@@ -35,6 +37,17 @@ export function makeTranslator(dict: Dict): Translator {
       return p.out.replace(HOLE, (_x, n: string) => vars[n] ?? '');
     }
     if (depth < 4) {
+      // glued text ("Вес: 78,5 кг", several sentences, a line with a date): replace every known phrase, keep numbers and
+      // punctuation — accepted only when no Russian is left, so the result is never a half-translated sentence
+      phraseRe ??= new RegExp('(?<![А-Яа-яЁёA-Za-z])(?:' + Object.keys(dict).filter(k => !k.includes('{') && /[А-Яа-яЁё]/.test(k)).sort((a, b) => b.length - a.length).map(esc).join('|') + ')(?![А-Яа-яЁё])', 'g');
+      numeric ??= Object.keys(dict).filter(k => /\{[a-h]\}/.test(k) && !/\{[i-z]/.test(k) && /[А-Яа-яЁё]/.test(k)).sort((a, b) => b.length - a.length).map(k => {
+        const body = esc(k).replace(/\\\{([a-h])\\\}/g, '(?<$1>[^\\sА-Яа-яЁё]{1,16})');   // numbers, month names and units: one token without Russian letters
+        return { re: new RegExp('(?<![А-Яа-яЁёA-Za-z])' + body + '(?![А-Яа-яЁё])', 'g'), out: dict[k] };
+      });
+      let glued = s;
+      for (const p of numeric) glued = glued.replace(p.re, (...a) => { const g = a[a.length - 1] as Record<string, string>; return p.out.replace(HOLE, (_x, n: string) => g[n] ?? ''); });
+      glued = glued.replace(phraseRe, x => dict[x] ?? x);
+      if (glued !== s && !/[А-Яа-яЁё]/.test(glued)) return glued;
       if (s.includes(' · ')) {
         const parts = s.split(' · '), out = parts.map(x => core(x, depth + 1));
         if (out.some((x, i) => x !== parts[i])) return out.join(' · ');

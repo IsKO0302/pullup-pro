@@ -8,8 +8,8 @@
 |---|---|---|
 | Типы (все пакеты и тесты) | `npm run typecheck` | без ошибок |
 | Сборка web + API + бот | `npm run build` | успешно |
-| Юнит-тесты | `npm run test:unit` | **66 / 66** (8 файлов; среди них новые: /app, /privacy, команды, алиасы env) |
-| Интеграционные (PostgreSQL) | `npm run test:integration` | **40 / 40** (3 файла) |
+| Юнит-тесты | `npm run test:unit` | **67 / 67** (8 файлов; среди них новые: /app, /privacy, команды, алиасы env) |
+| Интеграционные (PostgreSQL) | `npm run test:integration` | **42 / 42** (3 файла) |
 | E2E (Chrome + API + PostgreSQL) | `npm run test:e2e` | **32 / 32** (8 файлов, ≈2,6 мин; 5 тестов языка, включая 20 экранов и карточек каталога на EN и TR) |
 | Версия в одном файле | `npm run build:single` | успешно, 824 КБ |
 | Галерея скриншотов | `node tests/qa/gallery.mjs` | 85 экранов: 0 JS-ошибок, 0 выходов за ширину, 0 «NaN/undefined» |

@@ -110,6 +110,20 @@ describe.skipIf(!haveDb)('Telegram bot (grammY) with PostgreSQL', () => {
       const t = sent(calls)[0].payload.text;
       expect(t).toContain('Тренировок всего: <b>2</b>'); expect(t).toContain('Подтягивания: <b>8</b>'); expect(t).toContain('Отжимания: <b>20</b>');
     });
+    for (const lang of ['en', 'tr'] as const) {
+      it(`${lang}: statistics, today, progress, reminders and settings are fully translated`, async () => {
+        const u = { ...isa, language_code: lang };
+        for (const c of ['/stats', '/today', '/progress', '/reminder', '/settings']) await bot.handleUpdate(command(u, c));
+        const msgs = sent(calls).map(c => c.payload);
+        expect(msgs).toHaveLength(5);
+        for (const m of msgs) {
+          expect((m.text.match(/[А-Яа-яЁё]+/g) || []).join(' | '), m.text.replace(/\n/g, ' / ')).toBe('');
+          for (const row of m.reply_markup?.inline_keyboard || []) for (const b of row) expect(b.text).not.toMatch(/[а-яё]/i);
+        }
+        expect(msgs[0].text.toLowerCase()).toContain(lang === 'en' ? 'workouts' : 'antrenman');
+        expect(msgs[0].text).toContain('<b>2</b>');                    // numbers and HTML are untouched
+      });
+    }
     it('/today, /progress and /settings', async () => {
       await bot.handleUpdate(command(isa, '/today'));
       await bot.handleUpdate(command(isa, '/progress'));

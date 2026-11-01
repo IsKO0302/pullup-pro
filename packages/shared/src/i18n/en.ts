@@ -6,5 +6,7 @@ import { EN_3 } from './en-3';
 import { EN_4 } from './en-4';
 import { EN_5 } from './en-5';
 import { EN_6 } from './en-6';
+import { EN_7 } from './en-7';
+import { EN_8 } from './en-8';
 
-export const EN: Dict = { ...EN_1, ...EN_2, ...EN_3, ...EN_4, ...EN_5, ...EN_6 };
+export const EN: Dict = { ...EN_1, ...EN_2, ...EN_3, ...EN_4, ...EN_5, ...EN_6, ...EN_7, ...EN_8 };
