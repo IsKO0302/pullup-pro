@@ -311,6 +311,10 @@ body.in-tg .resume{bottom:calc(20px + var(--sab))}
 .rep-goal span{font-size:11.5px;color:var(--mut);font-weight:800;text-transform:uppercase;letter-spacing:.06em;margin-top:4px}
 .rep-goal.ok{border-color:rgba(var(--okRGB),.5);background:rgba(var(--okRGB),.09)}
 .rep-goal.ok span{color:var(--ok)}
+/* note with an action button: on narrow screens the button moves under the text instead of squeezing it */
+.note-act{flex-wrap:wrap}
+.note-act>.grow{flex:1 1 220px}
+.note-act>.btn{margin-left:auto;align-self:center}
 .rep-kpis{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:18px}
 .rep-kpis>div{display:flex;flex-direction:column;gap:2px;padding:12px 14px;border-radius:var(--r2);background:var(--bg2);border:1px solid var(--line);min-width:0}
 .rep-kpis span{font-size:11.5px;color:var(--mut);font-weight:800;text-transform:uppercase;letter-spacing:.06em}
@@ -410,7 +414,8 @@ body.light .pchip:hover>span{border-color:#b9b9c5}
   .medal-grid{grid-template-columns:minmax(0,1fr)}
   .rep-card{padding:18px}
   .rep-kpis b{font-size:23px}
-  .rep-goal{min-width:0;flex:1}
+  .rep-goal{min-width:0;flex:1 1 100%;flex-direction:row;justify-content:flex-start;gap:12px;padding:10px 14px}
+  .rep-goal span{margin-top:0}
   .rep-g{grid-template-columns:minmax(70px,110px) minmax(0,1fr) auto}
   .rem-row{grid-template-columns:minmax(0,1fr) 100px auto auto}
   .ph-row{gap:6px}
