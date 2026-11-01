@@ -1,6 +1,7 @@
 /* ================= API configuration (environment variables only — no secrets in code) ================= */
 import { existsSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
+import { withEnvAliases } from '@pullup/shared/env';
 
 export interface ApiConfig {
   port: number; host: string; databaseUrl: string;
@@ -24,7 +25,8 @@ function defaultWebDist(): string | null {
   return existsSync(p) ? p : null;
 }
 
-export function loadConfig(env: NodeJS.ProcessEnv = process.env): ApiConfig {
+export function loadConfig(rawEnv: NodeJS.ProcessEnv = process.env): ApiConfig {
+  const env = withEnvAliases(rawEnv);
   const databaseUrl = env.DATABASE_URL || '';
   if (!databaseUrl) throw new Error('DATABASE_URL is required, e.g. postgres://pullup:pullup@localhost:5432/pullup');
   const botToken = (env.BOT_TOKEN || '').trim() || null;

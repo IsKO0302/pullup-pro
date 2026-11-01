@@ -1,15 +1,29 @@
 import { describe, expect, it } from 'vitest';
 import { weekAdvice, weekReport } from '@pullup/shared';
-import { HELP, WELCOME, progressText, remindersText, statsText, todayText, daysLabel } from '../../apps/telegram-bot/src/texts';
+import { APP_MSG, HELP, PRIVACY, WELCOME, progressText, remindersText, statsText, todayText, daysLabel } from '../../apps/telegram-bot/src/texts';
 import { hmToMin, zoned } from '../../apps/telegram-bot/src/tz';
 import { dueReminders } from '../../apps/telegram-bot/src/reminders';
-import { screenUrl } from '../../apps/telegram-bot/src/bot';
+import { COMMANDS_EN, COMMANDS_RU, screenUrl } from '../../apps/telegram-bot/src/bot';
 import { sess, state } from './helpers';
 
 describe('bot texts', () => {
   it('welcome message has the required wording', () => {
-    expect(WELCOME).toContain('<b>PULLUP PRO</b>'); expect(WELCOME).toContain('Your personal fitness journey starts here.');
-    for (const c of ['/today', '/stats', '/progress', '/reminder', '/settings', '/help']) expect(HELP).toContain(c);
+    for (const s of ['<b>PULLUP PRO</b>', 'POWER. DISCIPLINE. PROGRESS.', 'Welcome to your personal fitness ecosystem.', 'Your training. Your progress. Your transformation.', 'OPEN PULLUP PRO']) expect(WELCOME).toContain(s);
+    for (const c of ['/app', '/today', '/stats', '/progress', '/reminder', '/settings', '/privacy', '/help']) expect(HELP).toContain(c);
+  });
+  it('every command is registered in both languages, including /app and /privacy', () => {
+    for (const list of [COMMANDS_RU, COMMANDS_EN]) {
+      const names = list.map(c => c.command);
+      for (const c of ['start', 'help', 'app', 'today', 'stats', 'progress', 'reminder', 'settings', 'privacy']) expect(names).toContain(c);
+      expect(new Set(names).size).toBe(names.length);                         // no duplicates
+      for (const c of list) expect(c.description.length).toBeGreaterThanOrEqual(3);   // Telegram needs 3–256 characters
+    }
+  });
+  it('privacy text says what is stored and where, mentions consent and deletion, and claims no medical features', () => {
+    const t = PRIVACY.toLowerCase();
+    for (const s of ['на устройстве', 'фото', 'согласи', 'удал', 'telegram']) expect(t).toContain(s);
+    expect(t).toContain('не заменяет врача');
+    expect(APP_MSG).toContain('PULLUP PRO');
   });
   it('statistics on an empty account say so instead of inventing numbers', () => {
     const t = statsText(state(), '2026-03-05');

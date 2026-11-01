@@ -65,9 +65,10 @@ describe.skipIf(!haveDb)('DB entities: catalog tables and views', () => {
     expect(Number(t.value)).toBe(Math.max(...S.tests.map((x: any) => x.pullups)));
   });
   it('body measurements, progress photos (metadata only without consent), achievements', async () => {
-    const [b] = await q(`SELECT * FROM v_body_measurements WHERE user_id = $1 AND id = 'b-x'`, [uid]);
+    // day::text — the pg driver turns DATE into a local-midnight Date, which shifts the day in time zones east of UTC
+    const [b] = await q(`SELECT *, day::text AS day_text FROM v_body_measurements WHERE user_id = $1 AND id = 'b-x'`, [uid]);
     expect(Number(b.weight_kg)).toBe(78.4); expect(Number(b.waist_cm)).toBe(82);
-    expect(b.day.toISOString().slice(0, 10)).toBe('2026-10-30');
+    expect(b.day_text).toBe('2026-10-30');
     const [ph] = await q('SELECT * FROM v_progress_photos WHERE user_id = $1', [uid]);
     expect(ph).toMatchObject({ id: 'ph1', pose: 'front', stored_on_server: false });
     const ach = await q('SELECT * FROM v_achievements WHERE user_id = $1', [uid]);

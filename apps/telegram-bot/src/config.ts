@@ -1,4 +1,6 @@
 /* ================= Bot configuration (environment variables; the token never leaves the server) ================= */
+import { withEnvAliases } from '@pullup/shared/env';
+
 export interface BotConfig {
   botToken: string; databaseUrl: string; webAppUrl: string | null;
   mode: 'polling' | 'webhook'; webhookUrl: string | null; webhookSecret: string | null; port: number; host: string;
@@ -6,7 +8,8 @@ export interface BotConfig {
 }
 const bool = (v: string | undefined, def: boolean) => v == null || v === '' ? def : /^(1|true|yes|on)$/i.test(v);
 
-export function loadBotConfig(env: NodeJS.ProcessEnv = process.env): BotConfig {
+export function loadBotConfig(rawEnv: NodeJS.ProcessEnv = process.env): BotConfig {
+  const env = withEnvAliases(rawEnv);
   const botToken = (env.BOT_TOKEN || '').trim();
   if (!botToken) throw new Error('BOT_TOKEN is required: create a bot with @BotFather and put its token into .env');
   if (!/^\d{5,}:[A-Za-z0-9_-]{30,}$/.test(botToken)) throw new Error('BOT_TOKEN does not look like a token from @BotFather (<digits>:<secret>)');

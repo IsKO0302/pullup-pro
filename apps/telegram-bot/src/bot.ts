@@ -1,5 +1,5 @@
 /* ================= PULLUP PRO Telegram bot (grammY) =================
- * Commands: /start /help /today /stats /progress /reminder /settings; Mini App button; account linking for the web/PWA.
+ * Commands: /start /app /help /today /stats /progress /reminder /settings /privacy; Mini App button; account linking for the web/PWA.
  * Personal data is shown only in private chats and only for the Telegram account that owns it. */
 import { Bot, InlineKeyboard, type Context } from 'grammy';
 import type { UserFromGetMe } from 'grammy/types';
@@ -7,19 +7,21 @@ import type pg from 'pg';
 import * as db from '@pullup/db';
 import { recordsToState, type AppState, type Collection } from '@pullup/shared';
 import { zoned } from './tz';
-import { HELP, LINK_MSG, NO_ACCOUNT, NO_WEBAPP, PRIVATE_ONLY, SERVICE_DOWN, WELCOME, progressText, remindersText, settingsText, statsText, todayText } from './texts';
+import { APP_MSG, HELP, LINK_MSG, NO_ACCOUNT, NO_WEBAPP, PRIVACY, PRIVATE_ONLY, SERVICE_DOWN, WELCOME, progressText, remindersText, settingsText, statsText, todayText } from './texts';
 
 export interface BotDeps { pool: pg.Pool; webAppUrl: string | null; defaultTz?: string; now?: () => Date; log?: (msg: string, err?: unknown) => void }
 
 export const COMMANDS_RU = [
-  { command: 'start', description: 'Открыть PULLUP PRO' }, { command: 'today', description: 'Миссия и тренировка на сегодня' },
+  { command: 'start', description: 'Запуск PULLUP PRO' }, { command: 'app', description: 'Открыть приложение' }, { command: 'today', description: 'Миссия и тренировка на сегодня' },
   { command: 'stats', description: 'Статистика тренировок' }, { command: 'progress', description: 'Неделя и изменения силы' },
-  { command: 'reminder', description: 'Напоминания' }, { command: 'settings', description: 'Аккаунт и настройки' }, { command: 'help', description: 'Справка' }
+  { command: 'reminder', description: 'Напоминания' }, { command: 'settings', description: 'Аккаунт и настройки' },
+  { command: 'privacy', description: 'Конфиденциальность' }, { command: 'help', description: 'Справка' }
 ];
 export const COMMANDS_EN = [
-  { command: 'start', description: 'Open PULLUP PRO' }, { command: 'today', description: "Today's mission and workout" },
+  { command: 'start', description: 'Start PULLUP PRO' }, { command: 'app', description: 'Open the app' }, { command: 'today', description: "Today's mission and workout" },
   { command: 'stats', description: 'Workout statistics' }, { command: 'progress', description: 'Weekly progress and strength changes' },
-  { command: 'reminder', description: 'Reminders' }, { command: 'settings', description: 'Account and settings' }, { command: 'help', description: 'Help' }
+  { command: 'reminder', description: 'Reminders' }, { command: 'settings', description: 'Account and settings' },
+  { command: 'privacy', description: 'Privacy information' }, { command: 'help', description: 'Help' }
 ];
 
 /** Mini App URL with a deep-link screen (?screen=train → the app opens #/train) */
@@ -96,9 +98,13 @@ export function createBot(token: string, deps: BotDeps, opts: { botInfo?: UserFr
     await ctx.reply(settingsText(x.S, { name: pu.name, username: x.user.username, photosConsent: x.user.photos_consent, lastChangeAt: lc.at, records: lc.records }, x.zone),
       { ...html, reply_markup: appButton(new InlineKeyboard(), deps.webAppUrl, '⚙️ Открыть настройки', 'settings') });
   });
-  const HANDLERS: Record<string, (ctx: Context) => Promise<void>> = { today, stats, progress, reminder, settings, help };
+  const app = guard(async ctx => { await ctx.reply(APP_MSG + (hasApp ? '' : '\n\n' + NO_WEBAPP), { ...html, reply_markup: appButton(new InlineKeyboard(), deps.webAppUrl, 'OPEN PULLUP PRO') }); });
+  const privacy = guard(async ctx => { await ctx.reply(PRIVACY, { ...html, reply_markup: appButton(new InlineKeyboard(), deps.webAppUrl, '⚙️ Настройки и данные', 'settings') }); });
+  const HANDLERS: Record<string, (ctx: Context) => Promise<void>> = { app, today, stats, progress, reminder, settings, privacy, help };
 
   bot.command('start', start);
+  bot.command('app', app);
+  bot.command('privacy', privacy);
   bot.command('help', help);
   bot.command('today', today);
   bot.command('stats', stats);
@@ -106,7 +112,7 @@ export function createBot(token: string, deps: BotDeps, opts: { botInfo?: UserFr
   bot.command(['reminder', 'reminders'], reminder);
   bot.command('settings', settings);
 
-  bot.callbackQuery(/^cmd:(today|stats|progress|reminder|settings|help)$/, async ctx => {
+  bot.callbackQuery(/^cmd:(app|today|stats|progress|reminder|settings|privacy|help)$/, async ctx => {
     await ctx.answerCallbackQuery().catch(() => undefined);
     await HANDLERS[ctx.match[1]](ctx);
   });
@@ -131,7 +137,7 @@ export function createBot(token: string, deps: BotDeps, opts: { botInfo?: UserFr
     } catch (e) { log('my_chat_member failed', e); }
   });
   bot.chatType('private').on('message', async ctx => {
-    await ctx.reply('Используйте команды: /today, /stats, /progress, /reminder, /settings или /help.', { reply_markup: appButton(new InlineKeyboard(), deps.webAppUrl, 'OPEN PULLUP PRO') });
+    await ctx.reply('Используйте команды: /app, /today, /stats, /progress, /reminder, /settings, /privacy или /help.', { reply_markup: appButton(new InlineKeyboard(), deps.webAppUrl, 'OPEN PULLUP PRO') });
   });
   bot.catch(err => log(`update ${err.ctx?.update?.update_id} failed`, err.error));
   return bot;

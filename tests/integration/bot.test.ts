@@ -45,11 +45,31 @@ describe.skipIf(!haveDb)('Telegram bot (grammY) with PostgreSQL', () => {
   it('/start: welcome text and the OPEN PULLUP PRO Mini App button', async () => {
     await bot.handleUpdate(command(isa, '/start'));
     const m = sent(calls)[0].payload;
-    expect(m.text).toContain('PULLUP PRO'); expect(m.text).toContain('Your personal fitness journey starts here.');
+    expect(m.text).toContain('PULLUP PRO'); expect(m.text).toContain('POWER. DISCIPLINE. PROGRESS.');
+    expect(m.text).toContain('Welcome to your personal fitness ecosystem.'); expect(m.text).toContain('Your training. Your progress. Your transformation.');
     expect(m.parse_mode).toBe('HTML');
     expect(m.reply_markup.inline_keyboard[0][0]).toEqual({ text: 'OPEN PULLUP PRO', web_app: { url: WEBAPP } });
     const u = await db.getUserByTelegram(pool, isa.id);
     expect(u?.bot_started_at).toBeTruthy();
+  });
+  it('/app: opens the Mini App with one web_app button; works without an account', async () => {
+    await bot.handleUpdate(command({ id: 4242, first_name: 'New', username: 'new_user', language_code: 'en' }, '/app'));
+    const m = sent(calls)[0].payload;
+    expect(m.text).toContain('PULLUP PRO');
+    expect(m.reply_markup.inline_keyboard[0][0]).toEqual({ text: 'OPEN PULLUP PRO', web_app: { url: WEBAPP } });
+  });
+  it('/privacy: explains data handling and links to the app settings', async () => {
+    await bot.handleUpdate(command(isa, '/privacy'));
+    const m = sent(calls)[0].payload;
+    expect(m.text).toContain('Конфиденциальность'); expect(m.text).toContain('на устройстве');
+    expect(m.reply_markup.inline_keyboard[0][0].web_app.url).toBe(WEBAPP + '?screen=settings');
+  });
+  it('/app and /privacy are refused in group chats (no personal links there)', async () => {
+    const group = { id: -5, type: 'group', title: 'g' };
+    await bot.handleUpdate(command(isa, '/app', group));
+    await bot.handleUpdate(command(isa, '/privacy', group));
+    for (const c of sent(calls)) expect(c.payload.text).toContain('личные сообщения');
+    expect(sent(calls)).toHaveLength(2);
   });
   it('/start link_<code>: confirms a browser sign-in', async () => {
     const L = await db.createLinkCode(pool, 'pwa', 10);
