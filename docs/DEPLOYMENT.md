@@ -149,3 +149,12 @@ pg_restore --clean --if-exists --dbname="$DATABASE_URL" pullup-YYYY-MM-DD.dump
 
 - API не хранит состояние в памяти (сессии в PostgreSQL) и может работать в нескольких экземплярах за балансировщиком; лимиты запросов считаются в памяти каждого экземпляра.
 - Бот — один экземпляр на токен (ограничение Telegram для polling и webhook). Повторная отправка напоминаний исключена записью в `reminder_log`.
+
+## Бесплатный показ: GitHub Pages + кнопка меню Telegram
+
+Статическая сборка (`apps/web/dist`) публикуется на GitHub Pages workflow-ом `.github/workflows/pages.yml` при каждом пуше в `main` (typecheck + unit-тесты → сборка → деплой). Репозиторий должен быть публичным (Pages бесплатны только для них).
+
+- Адрес: `https://<пользователь>.github.io/<репозиторий>/` (сейчас <https://isko0302.github.io/pullup-pro/>). Включение один раз: `Settings → Pages → Source: GitHub Actions` (или `gh api -X POST repos/<user>/<repo>/pages -f build_type=workflow`).
+- Кнопка меню бота: `setChatMenuButton` с `web_app.url` этого адреса (делается один раз через Bot API или в BotFather: Bot Settings → Menu Button). Процесс бота для этого **не нужен**.
+- Ограничения такого режима: нет API, поэтому нет входа через Telegram, облачной синхронизации и проверки `initData`; данные хранятся в браузере/WebView на устройстве (делайте экспорт JSON). Команды бота (`/start`, `/today` …) работают только при запущенном процессе бота с PostgreSQL.
+- Для полноценного режима (синхронизация, вход, команды, напоминания) разверните API + PostgreSQL + бота (см. выше) и укажите его HTTPS-адрес в `WEBAPP_URL`.

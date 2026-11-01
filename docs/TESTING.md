@@ -2,15 +2,16 @@
 
 ## Результаты последнего прогона
 
-Окружение: Windows 11, Node.js 24, PostgreSQL 18.6 (npm-пакет `embedded-postgres`, базы в UTF8), Google Chrome (`CHROMIUM_PATH`), Playwright 1.63. Дата: 2026-11-01.
+Окружение: Windows 11, Node.js 24, PostgreSQL 18.6 (npm-пакет `embedded-postgres`, базы в UTF8), Google Chrome (`CHROMIUM_PATH`), Playwright 1.63. Дата: 2026-11-02 (версия после слияния с обновлением от 02.11.26).
 
 | Проверка | Команда | Результат |
 |---|---|---|
 | Типы (все пакеты и тесты) | `npm run typecheck` | без ошибок |
 | Сборка web + API + бот | `npm run build` | успешно |
-| Юнит-тесты | `npm run test:unit` | **56 / 56** (8 файлов; +10 новых: /app, /privacy, команды, алиасы env) |
-| Интеграционные (PostgreSQL) | `npm run test:integration` | **36 / 36** (3 файла) |
-| E2E (Chrome + API + PostgreSQL) | `npm run test:e2e` | **26 / 26** (≈2 мин) |
+| Юнит-тесты | `npm run test:unit` | **53 / 53** (8 файлов; среди них новые: /app, /privacy, команды, алиасы env) |
+| Интеграционные (PostgreSQL) | `npm run test:integration` | **39 / 39** (3 файла) |
+| E2E (Chrome + API + PostgreSQL) | `npm run test:e2e` | **27 / 27** (7 файлов, ≈2,2 мин; найден и исправлен выход календаря за экран на 320 px) |
+| Версия в одном файле | `npm run build:single` | успешно, 824 КБ |
 | Галерея скриншотов | `node tests/qa/gallery.mjs` | 85 экранов: 0 JS-ошибок, 0 выходов за ширину, 0 «NaN/undefined» |
 | Mini App (3 размера) | `npx tsx tests/qa/telegram-shots.ts` | сервер принял подпись initData: HTTP 200 ×3 |
 | Версия в одном файле | `npm run build:single` | успешно (`dist-single/PULLUP-PRO-2.0.0.html`, 824 КБ) |

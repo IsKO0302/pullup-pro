@@ -49,8 +49,8 @@
 | Проверка | Результат |
 |---|---|
 | `npm run typecheck` (все пакеты и тесты) | без ошибок |
-| `npm run test:unit` | 56 тестов пройдено |
-| `npm run test:integration` (PostgreSQL) | 36 из 36 |
+| `npm run test:unit` | 53 теста пройдено |
+| `npm run test:integration` (PostgreSQL) | 39 из 39 |
 | `npm run test:e2e` (Chrome + API + PostgreSQL) | см. `docs/TESTING.md` (итог финального прогона) |
 | Галерея скриншотов | 85 экранов без JS-ошибок, без горизонтального скролла, без «NaN/undefined» |
 | Mini App (Android/iOS/Desktop размеры) | сервер подтвердил подпись initData — HTTP 200 на всех трёх |
