@@ -1,0 +1,67 @@
+# PROJECT_STATUS — PULLUP PRO 2.0
+
+Состояние на 2026-11-01. Файл обновляется в конце каждого этапа; нумерация этапов — из мастер-плана (PHASE 0–12).
+
+## Что было получено (PHASE 0 — обследование)
+
+| Архив | Что внутри | Вывод |
+|---|---|---|
+| `zip/PULLUP-PRO-2.0.zip` | полный монорепозиторий (173 файла): `apps/web`, `apps/api`, `apps/telegram-bot`, `packages/shared`, `packages/db`, миграции, 3 набора тестов, 8 документов, `legacy/v1` | **основной проект** |
+| `zip/PULLUP-PRO-2.0-web.zip` | 14 файлов — только production-сборка веб-приложения (`dist`) | это собранный вывод основного проекта: хэш `assets/index-DmTQK6js.js` совпадает с пересборкой из исходников; отдельных функций нет |
+| `old/` | исходная версия 1.0 (`PULLUP-PRO.html`, `src/`, `build.py`) | копия сохранена и в `legacy/v1` |
+
+Оригиналы не изменялись: `zip/*.zip` (контрольные суммы — `zip/SHA256SUMS`) и распакованные папки `PULLUP-PRO-2.0*` побайтово совпадают с архивами. Рабочая копия — `D:\ISA_SPORT\PULLUP-PRO` (Git, тег `baseline-import` = состояние «как получено»).
+
+## Что сделано в этой сессии
+
+- Рабочая копия, Git, контрольные точки (`baseline-import`, `phase-baseline-green`).
+- Исправлена сборка на Windows (`scripts/bundle.mjs`: путь точки входа считался внешним пакетом).
+- Исправлен тест, зависящий от часового пояса (`db-entities.test.ts`).
+- Бот: команды **/app** и **/privacy**, приветствие точно по плану (POWER. DISCIPLINE. PROGRESS.), регистрация команд RU/EN.
+- Переменные окружения из плана: `TELEGRAM_BOT_TOKEN`, `TELEGRAM_BOT_USERNAME`, `TELEGRAM_WEBAPP_URL`, `APP_BASE_URL` работают как алиасы (`packages/shared/src/env.ts`).
+- Документация: `CLAUDE.md`, `docs/SECURITY.md`, `PROJECT_STATUS.md`, `PROJECT_ROADMAP.md`; реальные результаты тестов в `docs/TESTING.md`.
+- Галерея из 120+ скриншотов (`docs/screenshots/`) + скрипты `tests/qa/gallery.mjs`, `tests/qa/telegram-shots.ts`.
+
+## Соответствие мастер-плану
+
+| Область плана | Статус | Комментарий |
+|---|---|---|
+| Сохранение функций 1.0, миграция данных | ✅ реализовано, проверено | тесты на реальной резервной копии 1.0 (unit + e2e) |
+| Full Body: PULL/PUSH/SHOULDERS/CORE/LEGS/MOBILITY, описания | ✅ | 85 упражнений; все позиции списка плана найдены в каталоге |
+| Программы (Full Body A/B/C, PPL, Upper/Lower, фокусные, Muscle-Up) | ✅ | прогрессия по подтверждению, разгрузочные недели |
+| ISA PERSONAL, профиль, онбординг, Dashboard | ✅ | |
+| Body Transformation (замеры, фото, сравнение, экспорт) | ✅ | фото локально; облако — только по согласию |
+| Питание | ✅ | ручное добавление, без платных API, расчёты «приблизительно» |
+| Personal Coach | ✅ | набор правил (не «ИИ») |
+| Дизайн, адаптивность 320–1920 | ✅ | e2e `responsive.spec.ts`: 8 размеров × 19 экранов без выхода за границы |
+| PWA (манифест, SW, офлайн, обновление) | ✅ в браузере | установка на реальные iOS/Android **не проверялась** |
+| Backend (Fastify + PostgreSQL, миграции, синхронизация) | ✅ | проверено на реальном PostgreSQL 18 |
+| Telegram-бот (/start /help /app /today /stats /progress /reminder /settings /privacy) | ✅ логика, ⚠️ не проверено с настоящим Telegram | Bot API вызовы записываются тестами |
+| Telegram Mini App (тема, safe area, Main/BackButton, haptic, fullscreen) | ✅ с заглушкой SDK, ⚠️ не проверено в клиенте Telegram | |
+| Проверка initData (HMAC, auth_date, сессия, изоляция данных) | ✅ | см. `docs/SECURITY.md`; тесты подделки/просрочки |
+| Уведомления (серверный планировщик, часовой пояс, opt-in) | ✅ логика | в тестах реальной доставки нет |
+| Docker / Caddy / HTTPS | ⚠️ файлы есть, **не запускались** (Docker не установлен) | |
+| i18n (турецкий/английский) | ❌ не реализовано | строки в коде на русском; см. PROJECT_ROADMAP |
+| Хостинг | ❌ ничего не публиковалось и не покупалось (нужно ваше согласие) | |
+
+## Результаты проверок (реальные, Windows 11, Node 24, PostgreSQL 18.6, Chrome)
+
+| Проверка | Результат |
+|---|---|
+| `npm run typecheck` (все пакеты и тесты) | без ошибок |
+| `npm run test:unit` | 56 тестов пройдено |
+| `npm run test:integration` (PostgreSQL) | 36 из 36 |
+| `npm run test:e2e` (Chrome + API + PostgreSQL) | см. `docs/TESTING.md` (итог финального прогона) |
+| Галерея скриншотов | 85 экранов без JS-ошибок, без горизонтального скролла, без «NaN/undefined» |
+| Mini App (Android/iOS/Desktop размеры) | сервер подтвердил подпись initData — HTTP 200 на всех трёх |
+
+## Что осталось сделать вручную
+
+1. Создать бота в @BotFather и получить токен — [docs/TELEGRAM_SETUP.md](docs/TELEGRAM_SETUP.md). Токен вписывать только в `.env`.
+2. Выбрать хостинг с публичным HTTPS и развернуть — [docs/DEPLOYMENT.md](docs/DEPLOYMENT.md) (платное/публикация — только с вашего согласия).
+3. Проверить Mini App в настоящем клиенте Telegram (Android/iOS/Desktop) и установку PWA на телефон.
+4. Установить Docker (если нужен запуск `docker compose`) и проверить сборку образов.
+
+## Данные, нужные от владельца
+
+Токен и username бота (из BotFather), домен/хостинг, ваш Telegram id (если захотите ограничить доступ владельцем), решение по турецкому/английскому интерфейсу.

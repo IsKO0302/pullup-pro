@@ -2,6 +2,23 @@
 
 Формат основан на [Keep a Changelog](https://keepachangelog.com/ru/1.1.0/), версии — [SemVer](https://semver.org/lang/ru/).
 
+## [Unreleased] — продолжение разработки (2026-11-01)
+
+### Добавлено
+
+- Команды бота **/app** (открыть приложение) и **/privacy** (конфиденциальность); регистрация команд на русском и английском.
+- Алиасы переменных окружения: `TELEGRAM_BOT_TOKEN`, `TELEGRAM_BOT_USERNAME`, `TELEGRAM_WEBAPP_URL`, `APP_BASE_URL` (`packages/shared/src/env.ts`).
+- Документы: `CLAUDE.md`, `PROJECT_STATUS.md`, `PROJECT_ROADMAP.md`, `docs/SECURITY.md`.
+- Галерея скриншотов `docs/screenshots/` и скрипты `tests/qa/gallery.mjs`, `tests/qa/telegram-shots.ts`.
+
+### Изменено
+
+- Приветствие бота приведено к тексту из плана: «POWER. DISCIPLINE. PROGRESS. / Welcome to your personal fitness ecosystem. / Your training. Your progress. Your transformation.»
+
+### Исправлено
+
+- Сборка API и бота на Windows: `scripts/bundle.mjs` принимал абсолютный путь точки входа (`D:\…`) за npm-пакет и падал с «entry point cannot be marked as external».
+- Интеграционный тест `db-entities` зависел от часового пояса машины (тип DATE → локальная полночь).
 ## [2.0.0] — PULLUP PRO 2.0
 
 ### Добавлено

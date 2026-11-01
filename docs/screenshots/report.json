@@ -1,0 +1,594 @@
+{
+  "generatedAt": "2026-11-01T20:39:09.634Z",
+  "screens": [
+    {
+      "file": "desktop/01-home.png",
+      "label": "home",
+      "errors": [],
+      "overflow": null,
+      "brokenText": false
+    },
+    {
+      "file": "desktop/02-train.png",
+      "label": "train",
+      "errors": [],
+      "overflow": null,
+      "brokenText": false
+    },
+    {
+      "file": "desktop/03-group_pull.png",
+      "label": "group/pull",
+      "errors": [],
+      "overflow": null,
+      "brokenText": false
+    },
+    {
+      "file": "desktop/04-group_push.png",
+      "label": "group/push",
+      "errors": [],
+      "overflow": null,
+      "brokenText": false
+    },
+    {
+      "file": "desktop/05-group_shoulders.png",
+      "label": "group/shoulders",
+      "errors": [],
+      "overflow": null,
+      "brokenText": false
+    },
+    {
+      "file": "desktop/06-group_core.png",
+      "label": "group/core",
+      "errors": [],
+      "overflow": null,
+      "brokenText": false
+    },
+    {
+      "file": "desktop/07-group_legs.png",
+      "label": "group/legs",
+      "errors": [],
+      "overflow": null,
+      "brokenText": false
+    },
+    {
+      "file": "desktop/08-group_mobility.png",
+      "label": "group/mobility",
+      "errors": [],
+      "overflow": null,
+      "brokenText": false
+    },
+    {
+      "file": "desktop/09-group_muscleup.png",
+      "label": "group/muscleup",
+      "errors": [],
+      "overflow": null,
+      "brokenText": false
+    },
+    {
+      "file": "desktop/10-plan.png",
+      "label": "plan",
+      "errors": [],
+      "overflow": null,
+      "brokenText": false
+    },
+    {
+      "file": "desktop/11-programs.png",
+      "label": "programs",
+      "errors": [],
+      "overflow": null,
+      "brokenText": false
+    },
+    {
+      "file": "desktop/12-mu.png",
+      "label": "mu",
+      "errors": [],
+      "overflow": null,
+      "brokenText": false
+    },
+    {
+      "file": "desktop/13-library.png",
+      "label": "library",
+      "errors": [],
+      "overflow": null,
+      "brokenText": false
+    },
+    {
+      "file": "desktop/14-library_pullup.png",
+      "label": "library/pullup",
+      "errors": [],
+      "overflow": null,
+      "brokenText": false
+    },
+    {
+      "file": "desktop/15-journal.png",
+      "label": "journal",
+      "errors": [],
+      "overflow": null,
+      "brokenText": false
+    },
+    {
+      "file": "desktop/16-stats.png",
+      "label": "stats",
+      "errors": [],
+      "overflow": null,
+      "brokenText": false
+    },
+    {
+      "file": "desktop/17-report.png",
+      "label": "report",
+      "errors": [],
+      "overflow": null,
+      "brokenText": false
+    },
+    {
+      "file": "desktop/18-body.png",
+      "label": "body",
+      "errors": [],
+      "overflow": null,
+      "brokenText": false
+    },
+    {
+      "file": "desktop/19-body_photos.png",
+      "label": "body/photos",
+      "errors": [],
+      "overflow": null,
+      "brokenText": false
+    },
+    {
+      "file": "desktop/20-nutrition.png",
+      "label": "nutrition",
+      "errors": [],
+      "overflow": null,
+      "brokenText": false
+    },
+    {
+      "file": "desktop/21-calendar.png",
+      "label": "calendar",
+      "errors": [],
+      "overflow": null,
+      "brokenText": false
+    },
+    {
+      "file": "desktop/22-builder.png",
+      "label": "builder",
+      "errors": [],
+      "overflow": null,
+      "brokenText": false
+    },
+    {
+      "file": "desktop/23-builder_new.png",
+      "label": "builder/new",
+      "errors": [],
+      "overflow": null,
+      "brokenText": false
+    },
+    {
+      "file": "desktop/24-profile.png",
+      "label": "profile",
+      "errors": [],
+      "overflow": null,
+      "brokenText": false
+    },
+    {
+      "file": "desktop/25-achievements.png",
+      "label": "achievements",
+      "errors": [],
+      "overflow": null,
+      "brokenText": false
+    },
+    {
+      "file": "desktop/26-settings.png",
+      "label": "settings",
+      "errors": [],
+      "overflow": null,
+      "brokenText": false
+    },
+    {
+      "file": "mobile/01-home.png",
+      "label": "home",
+      "errors": [],
+      "overflow": null,
+      "brokenText": false
+    },
+    {
+      "file": "mobile/02-train.png",
+      "label": "train",
+      "errors": [],
+      "overflow": null,
+      "brokenText": false
+    },
+    {
+      "file": "mobile/03-group_pull.png",
+      "label": "group/pull",
+      "errors": [],
+      "overflow": null,
+      "brokenText": false
+    },
+    {
+      "file": "mobile/04-group_push.png",
+      "label": "group/push",
+      "errors": [],
+      "overflow": null,
+      "brokenText": false
+    },
+    {
+      "file": "mobile/05-group_shoulders.png",
+      "label": "group/shoulders",
+      "errors": [],
+      "overflow": null,
+      "brokenText": false
+    },
+    {
+      "file": "mobile/06-group_core.png",
+      "label": "group/core",
+      "errors": [],
+      "overflow": null,
+      "brokenText": false
+    },
+    {
+      "file": "mobile/07-group_legs.png",
+      "label": "group/legs",
+      "errors": [],
+      "overflow": null,
+      "brokenText": false
+    },
+    {
+      "file": "mobile/08-group_mobility.png",
+      "label": "group/mobility",
+      "errors": [],
+      "overflow": null,
+      "brokenText": false
+    },
+    {
+      "file": "mobile/09-group_muscleup.png",
+      "label": "group/muscleup",
+      "errors": [],
+      "overflow": null,
+      "brokenText": false
+    },
+    {
+      "file": "mobile/10-plan.png",
+      "label": "plan",
+      "errors": [],
+      "overflow": null,
+      "brokenText": false
+    },
+    {
+      "file": "mobile/11-programs.png",
+      "label": "programs",
+      "errors": [],
+      "overflow": null,
+      "brokenText": false
+    },
+    {
+      "file": "mobile/12-mu.png",
+      "label": "mu",
+      "errors": [],
+      "overflow": null,
+      "brokenText": false
+    },
+    {
+      "file": "mobile/13-library.png",
+      "label": "library",
+      "errors": [],
+      "overflow": null,
+      "brokenText": false
+    },
+    {
+      "file": "mobile/14-library_pullup.png",
+      "label": "library/pullup",
+      "errors": [],
+      "overflow": null,
+      "brokenText": false
+    },
+    {
+      "file": "mobile/15-journal.png",
+      "label": "journal",
+      "errors": [],
+      "overflow": null,
+      "brokenText": false
+    },
+    {
+      "file": "mobile/16-stats.png",
+      "label": "stats",
+      "errors": [],
+      "overflow": null,
+      "brokenText": false
+    },
+    {
+      "file": "mobile/17-report.png",
+      "label": "report",
+      "errors": [],
+      "overflow": null,
+      "brokenText": false
+    },
+    {
+      "file": "mobile/18-body.png",
+      "label": "body",
+      "errors": [],
+      "overflow": null,
+      "brokenText": false
+    },
+    {
+      "file": "mobile/19-body_photos.png",
+      "label": "body/photos",
+      "errors": [],
+      "overflow": null,
+      "brokenText": false
+    },
+    {
+      "file": "mobile/20-nutrition.png",
+      "label": "nutrition",
+      "errors": [],
+      "overflow": null,
+      "brokenText": false
+    },
+    {
+      "file": "mobile/21-calendar.png",
+      "label": "calendar",
+      "errors": [],
+      "overflow": null,
+      "brokenText": false
+    },
+    {
+      "file": "mobile/22-builder.png",
+      "label": "builder",
+      "errors": [],
+      "overflow": null,
+      "brokenText": false
+    },
+    {
+      "file": "mobile/23-builder_new.png",
+      "label": "builder/new",
+      "errors": [],
+      "overflow": null,
+      "brokenText": false
+    },
+    {
+      "file": "mobile/24-profile.png",
+      "label": "profile",
+      "errors": [],
+      "overflow": null,
+      "brokenText": false
+    },
+    {
+      "file": "mobile/25-achievements.png",
+      "label": "achievements",
+      "errors": [],
+      "overflow": null,
+      "brokenText": false
+    },
+    {
+      "file": "mobile/26-settings.png",
+      "label": "settings",
+      "errors": [],
+      "overflow": null,
+      "brokenText": false
+    },
+    {
+      "file": "responsive/home-360.png",
+      "label": "home @360",
+      "errors": [],
+      "overflow": null,
+      "brokenText": false
+    },
+    {
+      "file": "responsive/train-360.png",
+      "label": "train @360",
+      "errors": [],
+      "overflow": null,
+      "brokenText": false
+    },
+    {
+      "file": "responsive/stats-360.png",
+      "label": "stats @360",
+      "errors": [],
+      "overflow": null,
+      "brokenText": false
+    },
+    {
+      "file": "responsive/home-390.png",
+      "label": "home @390",
+      "errors": [],
+      "overflow": null,
+      "brokenText": false
+    },
+    {
+      "file": "responsive/train-390.png",
+      "label": "train @390",
+      "errors": [],
+      "overflow": null,
+      "brokenText": false
+    },
+    {
+      "file": "responsive/stats-390.png",
+      "label": "stats @390",
+      "errors": [],
+      "overflow": null,
+      "brokenText": false
+    },
+    {
+      "file": "responsive/home-430.png",
+      "label": "home @430",
+      "errors": [],
+      "overflow": null,
+      "brokenText": false
+    },
+    {
+      "file": "responsive/train-430.png",
+      "label": "train @430",
+      "errors": [],
+      "overflow": null,
+      "brokenText": false
+    },
+    {
+      "file": "responsive/stats-430.png",
+      "label": "stats @430",
+      "errors": [],
+      "overflow": null,
+      "brokenText": false
+    },
+    {
+      "file": "responsive/home-768.png",
+      "label": "home @768",
+      "errors": [],
+      "overflow": null,
+      "brokenText": false
+    },
+    {
+      "file": "responsive/train-768.png",
+      "label": "train @768",
+      "errors": [],
+      "overflow": null,
+      "brokenText": false
+    },
+    {
+      "file": "responsive/stats-768.png",
+      "label": "stats @768",
+      "errors": [],
+      "overflow": null,
+      "brokenText": false
+    },
+    {
+      "file": "responsive/home-1024.png",
+      "label": "home @1024",
+      "errors": [],
+      "overflow": null,
+      "brokenText": false
+    },
+    {
+      "file": "responsive/train-1024.png",
+      "label": "train @1024",
+      "errors": [],
+      "overflow": null,
+      "brokenText": false
+    },
+    {
+      "file": "responsive/stats-1024.png",
+      "label": "stats @1024",
+      "errors": [],
+      "overflow": null,
+      "brokenText": false
+    },
+    {
+      "file": "responsive/home-1366.png",
+      "label": "home @1366",
+      "errors": [],
+      "overflow": null,
+      "brokenText": false
+    },
+    {
+      "file": "responsive/train-1366.png",
+      "label": "train @1366",
+      "errors": [],
+      "overflow": null,
+      "brokenText": false
+    },
+    {
+      "file": "responsive/stats-1366.png",
+      "label": "stats @1366",
+      "errors": [],
+      "overflow": null,
+      "brokenText": false
+    },
+    {
+      "file": "responsive/home-1920.png",
+      "label": "home @1920",
+      "errors": [],
+      "overflow": null,
+      "brokenText": false
+    },
+    {
+      "file": "responsive/train-1920.png",
+      "label": "train @1920",
+      "errors": [],
+      "overflow": null,
+      "brokenText": false
+    },
+    {
+      "file": "responsive/stats-1920.png",
+      "label": "stats @1920",
+      "errors": [],
+      "overflow": null,
+      "brokenText": false
+    },
+    {
+      "file": "onboarding/*",
+      "label": "onboarding steps",
+      "errors": []
+    },
+    {
+      "file": "empty/home.png",
+      "label": "home (no data)",
+      "errors": [],
+      "overflow": null,
+      "brokenText": false
+    },
+    {
+      "file": "empty/journal.png",
+      "label": "journal (no data)",
+      "errors": [],
+      "overflow": null,
+      "brokenText": false
+    },
+    {
+      "file": "empty/stats.png",
+      "label": "stats (no data)",
+      "errors": [],
+      "overflow": null,
+      "brokenText": false
+    },
+    {
+      "file": "empty/body.png",
+      "label": "body (no data)",
+      "errors": [],
+      "overflow": null,
+      "brokenText": false
+    },
+    {
+      "file": "empty/nutrition.png",
+      "label": "nutrition (no data)",
+      "errors": [],
+      "overflow": null,
+      "brokenText": false
+    },
+    {
+      "file": "empty/achievements.png",
+      "label": "achievements (no data)",
+      "errors": [],
+      "overflow": null,
+      "brokenText": false
+    },
+    {
+      "file": "workout/*",
+      "label": "workout flow",
+      "errors": []
+    },
+    {
+      "file": "workout/desktop/*",
+      "label": "workout flow",
+      "errors": []
+    },
+    {
+      "file": "light/home.png",
+      "label": "home (light)",
+      "errors": [],
+      "overflow": null,
+      "brokenText": false
+    },
+    {
+      "file": "light/stats.png",
+      "label": "stats (light)",
+      "errors": [],
+      "overflow": null,
+      "brokenText": false
+    },
+    {
+      "file": "light/library_pullup.png",
+      "label": "library/pullup (light)",
+      "errors": [],
+      "overflow": null,
+      "brokenText": false
+    }
+  ]
+}

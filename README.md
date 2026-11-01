@@ -19,7 +19,7 @@ PULLUP PRO — персональная спортивная экосистем�
 - **Конструктор тренировок**, свободная тренировка, быстрые записи подтягиваний.
 - **Данные:** экспорт/импорт JSON (1.0 и 2.0), архив с фото, автоматические копии перед импортом/сбросом/демо, помеченный демо-режим (не синхронизируется).
 - **PWA:** установка, работа без интернета, безопасные обновления (новая версия ждёт согласия и не прерывает тренировку).
-- **Telegram:** Mini App (вход по проверенному initData, BackButton, MainButton, тема, safe area, полноэкранный режим на телефоне), бот с командами `/start /today /stats /progress /reminder /settings /help` и напоминаниями, вход в браузере через бота одноразовым кодом.
+- **Telegram:** Mini App (вход по проверенному initData, BackButton, MainButton, тема, safe area, полноэкранный режим на телефоне), бот с командами `/start /app /today /stats /progress /reminder /settings /privacy /help` и напоминаниями, вход в браузере через бота одноразовым кодом.
 - **Синхронизация:** local-first, записи с last-writer-wins, офлайн-очередь и досинхронизация при появлении сети.
 
 ## Структура
@@ -132,6 +132,6 @@ npm run test:e2e                                                       # бра�
 
 ## Документация
 
-[ARCHITECTURE](docs/ARCHITECTURE.md) · [DATABASE](docs/DATABASE.md) · [PWA_SETUP](docs/PWA_SETUP.md) · [TELEGRAM_SETUP](docs/TELEGRAM_SETUP.md) · [DEPLOYMENT](docs/DEPLOYMENT.md) · [TESTING](docs/TESTING.md) · [TRAINING_CONTENT_SOURCES](docs/TRAINING_CONTENT_SOURCES.md) · [CHANGELOG](CHANGELOG.md) · [AUDIT](docs/AUDIT.md)
+[ARCHITECTURE](docs/ARCHITECTURE.md) · [DATABASE](docs/DATABASE.md) · [PWA_SETUP](docs/PWA_SETUP.md) · [TELEGRAM_SETUP](docs/TELEGRAM_SETUP.md) · [DEPLOYMENT](docs/DEPLOYMENT.md) · [TESTING](docs/TESTING.md) · [TRAINING_CONTENT_SOURCES](docs/TRAINING_CONTENT_SOURCES.md) · [CHANGELOG](CHANGELOG.md) · [AUDIT](docs/AUDIT.md) · [SECURITY](docs/SECURITY.md) · [PROJECT_STATUS](PROJECT_STATUS.md) · [PROJECT_ROADMAP](PROJECT_ROADMAP.md) · [CLAUDE](CLAUDE.md) · [Скриншоты](docs/screenshots/README.md)
 
 Приложение не заменяет консультацию врача. При боли в суставах тренировку нужно остановить — для этого в режиме тренировки есть кнопка «Боль».

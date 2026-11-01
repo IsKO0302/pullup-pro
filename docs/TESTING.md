@@ -2,16 +2,23 @@
 
 ## Результаты последнего прогона
 
-Окружение: Node.js 24, PostgreSQL 16, Chromium (Playwright 1.63), Linux.
+Окружение: Windows 11, Node.js 24, PostgreSQL 18.6 (npm-пакет `embedded-postgres`, базы в UTF8), Google Chrome (`CHROMIUM_PATH`), Playwright 1.63. Дата: 2026-11-01.
 
 | Проверка | Команда | Результат |
 |---|---|---|
 | Типы (все пакеты и тесты) | `npm run typecheck` | без ошибок |
-| Сборка web + API + бот | `npm run build` | успешно (`sw.js` 2.0.0, 13 файлов в кэше) |
-| Юнит-тесты | `npm run test:unit` | **46 / 46** (7 файлов) |
+| Сборка web + API + бот | `npm run build` | успешно |
+| Юнит-тесты | `npm run test:unit` | **56 / 56** (8 файлов; +10 новых: /app, /privacy, команды, алиасы env) |
 | Интеграционные (PostgreSQL) | `npm run test:integration` | **36 / 36** (3 файла) |
-| E2E (Chromium) | `npm run test:e2e` | **26 / 26** (6 файлов, ≈2 мин) |
+| E2E (Chrome + API + PostgreSQL) | `npm run test:e2e` | **26 / 26** (≈2 мин) |
+| Галерея скриншотов | `node tests/qa/gallery.mjs` | 85 экранов: 0 JS-ошибок, 0 выходов за ширину, 0 «NaN/undefined» |
+| Mini App (3 размера) | `npx tsx tests/qa/telegram-shots.ts` | сервер принял подпись initData: HTTP 200 ×3 |
 
+Не проверялось (нужен внешний доступ): настоящий клиент Telegram и токен бота, Docker/Caddy, установка PWA на телефон. Скриншоты Mini App сняты с заглушкой Telegram SDK, чат бота на скриншоте — симуляция с настоящими текстами.
+
+Локальный PostgreSQL без установки (Windows): `npm i embedded-postgres` в отдельной папке, запустить кластер на порту 54329 и создать базы `CREATE DATABASE pullup_test ENCODING 'UTF8' TEMPLATE template0 LC_COLLATE 'C' LC_CTYPE 'C'` (кластер по умолчанию создаётся в WIN1251).
+
+Скриншоты: `docs/screenshots/` (индекс — `README.md`), перегенерация — `npm run dev`, затем `node tests/qa/gallery.mjs http://localhost:5173/ docs/screenshots`.
 ## Подготовка
 
 ```bash

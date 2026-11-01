@@ -1,0 +1,156 @@
+﻿# Скриншоты PULLUP PRO 2.0
+
+Сняты автоматически реальным Chrome (	ests/qa/gallery.mjs, 	ests/qa/telegram-shots.ts) на данных ДЕМО-режима (помечены в интерфейсе). Telegram: настоящий клиент не запускался — SDK заменён заглушкой, чат бота — симуляция с настоящими текстами бота.
+
+## Компьютер 1366×900 — все экраны
+
+- [01-home](desktop/01-home.png)
+- [02-train](desktop/02-train.png)
+- [03-group_pull](desktop/03-group_pull.png)
+- [04-group_push](desktop/04-group_push.png)
+- [05-group_shoulders](desktop/05-group_shoulders.png)
+- [06-group_core](desktop/06-group_core.png)
+- [07-group_legs](desktop/07-group_legs.png)
+- [08-group_mobility](desktop/08-group_mobility.png)
+- [09-group_muscleup](desktop/09-group_muscleup.png)
+- [10-plan](desktop/10-plan.png)
+- [11-programs](desktop/11-programs.png)
+- [12-mu](desktop/12-mu.png)
+- [13-library](desktop/13-library.png)
+- [14-library_pullup](desktop/14-library_pullup.png)
+- [15-journal](desktop/15-journal.png)
+- [16-stats](desktop/16-stats.png)
+- [17-report](desktop/17-report.png)
+- [18-body](desktop/18-body.png)
+- [19-body_photos](desktop/19-body_photos.png)
+- [20-nutrition](desktop/20-nutrition.png)
+- [21-calendar](desktop/21-calendar.png)
+- [22-builder](desktop/22-builder.png)
+- [23-builder_new](desktop/23-builder_new.png)
+- [24-profile](desktop/24-profile.png)
+- [25-achievements](desktop/25-achievements.png)
+- [26-settings](desktop/26-settings.png)
+
+## Телефон 390×844 — все экраны
+
+- [01-home](mobile/01-home.png)
+- [02-train](mobile/02-train.png)
+- [03-group_pull](mobile/03-group_pull.png)
+- [04-group_push](mobile/04-group_push.png)
+- [05-group_shoulders](mobile/05-group_shoulders.png)
+- [06-group_core](mobile/06-group_core.png)
+- [07-group_legs](mobile/07-group_legs.png)
+- [08-group_mobility](mobile/08-group_mobility.png)
+- [09-group_muscleup](mobile/09-group_muscleup.png)
+- [10-plan](mobile/10-plan.png)
+- [11-programs](mobile/11-programs.png)
+- [12-mu](mobile/12-mu.png)
+- [13-library](mobile/13-library.png)
+- [14-library_pullup](mobile/14-library_pullup.png)
+- [15-journal](mobile/15-journal.png)
+- [16-stats](mobile/16-stats.png)
+- [17-report](mobile/17-report.png)
+- [18-body](mobile/18-body.png)
+- [19-body_photos](mobile/19-body_photos.png)
+- [20-nutrition](mobile/20-nutrition.png)
+- [21-calendar](mobile/21-calendar.png)
+- [22-builder](mobile/22-builder.png)
+- [23-builder_new](mobile/23-builder_new.png)
+- [24-profile](mobile/24-profile.png)
+- [25-achievements](mobile/25-achievements.png)
+- [26-settings](mobile/26-settings.png)
+
+## Адаптивность: 360, 390, 430, 768, 1024, 1366, 1920
+
+- [home-1024](responsive/home-1024.png)
+- [home-1366](responsive/home-1366.png)
+- [home-1920](responsive/home-1920.png)
+- [home-360](responsive/home-360.png)
+- [home-390](responsive/home-390.png)
+- [home-430](responsive/home-430.png)
+- [home-768](responsive/home-768.png)
+- [stats-1024](responsive/stats-1024.png)
+- [stats-1366](responsive/stats-1366.png)
+- [stats-1920](responsive/stats-1920.png)
+- [stats-360](responsive/stats-360.png)
+- [stats-390](responsive/stats-390.png)
+- [stats-430](responsive/stats-430.png)
+- [stats-768](responsive/stats-768.png)
+- [train-1024](responsive/train-1024.png)
+- [train-1366](responsive/train-1366.png)
+- [train-1920](responsive/train-1920.png)
+- [train-360](responsive/train-360.png)
+- [train-390](responsive/train-390.png)
+- [train-430](responsive/train-430.png)
+- [train-768](responsive/train-768.png)
+
+## Первый запуск (онбординг)
+
+- [01-disclaimer](onboarding/01-disclaimer.png)
+- [02-step](onboarding/02-step.png)
+- [03-step](onboarding/03-step.png)
+- [04-step](onboarding/04-step.png)
+- [05-step](onboarding/05-step.png)
+- [06-step](onboarding/06-step.png)
+- [07-step](onboarding/07-step.png)
+
+## Пустые состояния (новый пользователь)
+
+- [achievements](empty/achievements.png)
+- [body](empty/body.png)
+- [home](empty/home.png)
+- [journal](empty/journal.png)
+- [nutrition](empty/nutrition.png)
+- [stats](empty/stats.png)
+
+## Режим тренировки — телефон
+
+- [1-checkin](workout/1-checkin.png)
+- [2-warmup](workout/2-warmup.png)
+- [3-exercise](workout/3-exercise.png)
+- [4-rest-timer](workout/4-rest-timer.png)
+- [5-finish](workout/5-finish.png)
+
+## Режим тренировки — компьютер
+
+- [1-checkin](workout/desktop/1-checkin.png)
+- [2-warmup](workout/desktop/2-warmup.png)
+- [3-exercise](workout/desktop/3-exercise.png)
+- [4-rest-timer](workout/desktop/4-rest-timer.png)
+- [5-finish](workout/desktop/5-finish.png)
+
+## Светлая тема
+
+- [home](light/home.png)
+- [library_pullup](light/library_pullup.png)
+- [stats](light/stats.png)
+
+## Telegram Mini App и бот
+
+- [android-0-onboarding](telegram/android-0-onboarding.png)
+- [android-body](telegram/android-body.png)
+- [android-home](telegram/android-home.png)
+- [android-mu](telegram/android-mu.png)
+- [android-profile](telegram/android-profile.png)
+- [android-settings](telegram/android-settings.png)
+- [android-stats](telegram/android-stats.png)
+- [android-train](telegram/android-train.png)
+- [bot-chat-simulated](telegram/bot-chat-simulated.png)
+- [desktop-0-onboarding](telegram/desktop-0-onboarding.png)
+- [desktop-body](telegram/desktop-body.png)
+- [desktop-home](telegram/desktop-home.png)
+- [desktop-mu](telegram/desktop-mu.png)
+- [desktop-profile](telegram/desktop-profile.png)
+- [desktop-settings](telegram/desktop-settings.png)
+- [desktop-stats](telegram/desktop-stats.png)
+- [desktop-train](telegram/desktop-train.png)
+- [ios-0-onboarding](telegram/ios-0-onboarding.png)
+- [ios-body](telegram/ios-body.png)
+- [ios-home](telegram/ios-home.png)
+- [ios-mu](telegram/ios-mu.png)
+- [ios-profile](telegram/ios-profile.png)
+- [ios-settings](telegram/ios-settings.png)
+- [ios-stats](telegram/ios-stats.png)
+- [ios-train](telegram/ios-train.png)
+
+
