@@ -1,0 +1,13 @@
+# Reverse proxy with automatic HTTPS (Let's Encrypt) for docker-compose --profile https.
+# DOMAIN must point to this server (A/AAAA record); ports 80 and 443 must be reachable.
+{$DOMAIN} {
+	encode zstd gzip
+	# Telegram webhook (only when the bot runs with BOT_MODE=webhook and WEBHOOK_URL=https://DOMAIN/tg-webhook)
+	handle /tg-webhook* {
+		reverse_proxy bot:8081
+	}
+	# API + web app (PWA / Telegram Mini App)
+	handle {
+		reverse_proxy api:8080
+	}
+}

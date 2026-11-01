@@ -1,0 +1,27 @@
+{
+  "id": "./",
+  "name": "PULLUP PRO — ISA Personal Fitness",
+  "short_name": "PULLUP PRO",
+  "description": "Тренировки на всё тело, подтягивания и путь к Muscle-Up: план, журнал, замеры тела, прогресс. Работает без интернета.",
+  "lang": "ru",
+  "dir": "ltr",
+  "start_url": "./#/home",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#09090b",
+  "theme_color": "#09090b",
+  "categories": ["fitness", "health", "sports"],
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icons/maskable-192.png", "sizes": "192x192", "type": "image/png", "purpose": "maskable" },
+    { "src": "icons/maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ],
+  "shortcuts": [
+    { "name": "Начать тренировку", "short_name": "Тренировка", "url": "./#/train", "icons": [{ "src": "icons/shortcut-96.png", "sizes": "96x96", "type": "image/png" }] },
+    { "name": "Мой план", "short_name": "План", "url": "./#/plan", "icons": [{ "src": "icons/shortcut-96.png", "sizes": "96x96", "type": "image/png" }] },
+    { "name": "Прогресс", "short_name": "Прогресс", "url": "./#/stats", "icons": [{ "src": "icons/shortcut-96.png", "sizes": "96x96", "type": "image/png" }] },
+    { "name": "Замеры тела", "short_name": "Тело", "url": "./#/body", "icons": [{ "src": "icons/shortcut-96.png", "sizes": "96x96", "type": "image/png" }] }
+  ]
+}

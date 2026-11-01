@@ -1,0 +1,66 @@
+# PULLUP PRO 2.0 — local / single-server run with Docker Compose.
+#   cp .env.example .env      # fill in at least POSTGRES_PASSWORD
+#   docker compose up -d --build                    # PostgreSQL + API + web app  → http://localhost:8080
+#   docker compose --profile bot up -d --build      # + Telegram bot (needs BOT_TOKEN, WEBAPP_URL)
+#   docker compose --profile https up -d --build    # + Caddy with automatic HTTPS for DOMAIN (Telegram Mini App needs HTTPS)
+# The API and the bot apply database migrations on start (advisory lock, safe to start together).
+
+services:
+  db:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_DB: pullup
+      POSTGRES_USER: pullup
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?set POSTGRES_PASSWORD in .env}
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U pullup -d pullup"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+    restart: unless-stopped
+
+  api:
+    build: { context: ., target: api }
+    env_file: .env
+    environment:
+      DATABASE_URL: postgres://pullup:${POSTGRES_PASSWORD}@db:5432/pullup
+      HOST: 0.0.0.0
+      PORT: "8080"
+    ports:
+      - "${API_PUBLISH:-8080}:8080"
+    depends_on:
+      db: { condition: service_healthy }
+    restart: unless-stopped
+
+  bot:
+    profiles: ["bot"]
+    build: { context: ., target: bot }
+    env_file: .env
+    environment:
+      DATABASE_URL: postgres://pullup:${POSTGRES_PASSWORD}@db:5432/pullup
+      BOT_PORT: "8081"
+    depends_on:
+      db: { condition: service_healthy }
+      api: { condition: service_started }
+    restart: unless-stopped
+
+  caddy:
+    profiles: ["https"]
+    image: caddy:2-alpine
+    environment:
+      DOMAIN: ${DOMAIN:?set DOMAIN in .env for the https profile}
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./deploy/Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy_data:/data
+    depends_on:
+      - api
+    restart: unless-stopped
+
+volumes:
+  pgdata:
+  caddy_data:

@@ -1,0 +1,4299 @@
+{
+ "app": "pullup-pro",
+ "version": "1.0.0",
+ "exported": "2026-11-01T16:57:15.915Z",
+ "data": {
+  "v": 1,
+  "profile": {
+   "name": "Иса",
+   "bodyweight": 78,
+   "program": "intermediate",
+   "maxPullups": 11,
+   "goalDaily": 30,
+   "weeklyTarget": 3,
+   "sound": true,
+   "vibrate": true,
+   "restDefault": 90,
+   "accent": "orange",
+   "onboarded": true,
+   "disclaimerAccepted": true,
+   "created": "2026-11-01",
+   "autoRest": true
+  },
+  "sessions": [
+   {
+    "id": "mvy2ox4i1atd600",
+    "date": "2026-08-17",
+    "startedAt": 1786991760000,
+    "title": "INTERMEDIATE · Тренировка A",
+    "source": "program",
+    "ref": {
+     "prog": "intermediate",
+     "idx": 0,
+     "w": "A"
+    },
+    "durationSec": 2820,
+    "items": [
+     {
+      "ex": "pullup",
+      "sets": [
+       {
+        "reps": 3,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 3,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 3,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 3,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 2,
+        "weight": 0,
+        "done": true
+       }
+      ]
+     },
+     {
+      "ex": "negative",
+      "sets": [
+       {
+        "reps": 3,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 3,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 2,
+        "weight": 0,
+        "done": true
+       }
+      ]
+     },
+     {
+      "ex": "aussie",
+      "sets": [
+       {
+        "reps": 12,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 12,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 12,
+        "weight": 0,
+        "done": true
+       }
+      ]
+     },
+     {
+      "ex": "hollow",
+      "sets": [
+       {
+        "time": 30,
+        "done": true
+       },
+       {
+        "time": 28,
+        "done": true
+       },
+       {
+        "time": 30,
+        "done": true
+       }
+      ]
+     }
+    ],
+    "feel": 4,
+    "pain": false,
+    "light": false,
+    "notes": "",
+    "completed": true,
+    "warmup": true
+   },
+   {
+    "id": "mvy2ox4i8lh8102",
+    "date": "2026-08-19",
+    "startedAt": 1787167380000,
+    "title": "INTERMEDIATE · Тренировка B",
+    "source": "program",
+    "ref": {
+     "prog": "intermediate",
+     "idx": 1,
+     "w": "B"
+    },
+    "durationSec": 2460,
+    "items": [
+     {
+      "ex": "ladder",
+      "sets": [
+       {
+        "reps": 1,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 2,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 3,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 4,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 1,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 2,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 3,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 4,
+        "weight": 0,
+        "done": true
+       }
+      ]
+     },
+     {
+      "ex": "chinup",
+      "sets": [
+       {
+        "reps": 3,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 3,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 2,
+        "weight": 0,
+        "done": true
+       }
+      ]
+     },
+     {
+      "ex": "dips",
+      "sets": [
+       {
+        "reps": 8,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 8,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 7,
+        "weight": 0,
+        "done": true
+       }
+      ]
+     },
+     {
+      "ex": "kneeraise",
+      "sets": [
+       {
+        "reps": 10,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 10,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 10,
+        "weight": 0,
+        "done": true
+       }
+      ]
+     }
+    ],
+    "feel": 5,
+    "pain": false,
+    "light": false,
+    "notes": "",
+    "completed": true,
+    "warmup": true
+   },
+   {
+    "id": "mvy2ox4jgcrm504",
+    "date": "2026-08-21",
+    "startedAt": 1787337420000,
+    "title": "INTERMEDIATE · Тренировка C",
+    "source": "program",
+    "ref": {
+     "prog": "intermediate",
+     "idx": 2,
+     "w": "C"
+    },
+    "durationSec": 3000,
+    "items": [
+     {
+      "ex": "pause",
+      "sets": [
+       {
+        "reps": 3,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 3,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 3,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 2,
+        "weight": 0,
+        "done": true
+       }
+      ]
+     },
+     {
+      "ex": "close",
+      "sets": [
+       {
+        "reps": 3,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 3,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 3,
+        "weight": 0,
+        "done": true
+       }
+      ]
+     },
+     {
+      "ex": "towel",
+      "sets": [
+       {
+        "time": 19,
+        "done": true
+       },
+       {
+        "time": 19,
+        "done": true
+       },
+       {
+        "time": 19,
+        "done": true
+       }
+      ]
+     },
+     {
+      "ex": "pushup",
+      "sets": [
+       {
+        "reps": 12,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 12,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 11,
+        "weight": 0,
+        "done": true
+       }
+      ]
+     },
+     {
+      "ex": "facepull",
+      "sets": [
+       {
+        "reps": 15,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 15,
+        "weight": 0,
+        "done": true
+       }
+      ]
+     }
+    ],
+    "feel": 4,
+    "pain": false,
+    "light": false,
+    "notes": "",
+    "completed": true,
+    "warmup": true
+   },
+   {
+    "id": "mvy2ox4jm0u9e10",
+    "date": "2026-08-24",
+    "startedAt": 1787596140000,
+    "title": "INTERMEDIATE · Тренировка A",
+    "source": "program",
+    "ref": {
+     "prog": "intermediate",
+     "idx": 0,
+     "w": "A"
+    },
+    "durationSec": 2700,
+    "items": [
+     {
+      "ex": "pullup",
+      "sets": [
+       {
+        "reps": 4,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 4,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 4,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 4,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 4,
+        "weight": 0,
+        "done": true
+       }
+      ]
+     },
+     {
+      "ex": "negative",
+      "sets": [
+       {
+        "reps": 3,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 3,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 3,
+        "weight": 0,
+        "done": true
+       }
+      ]
+     },
+     {
+      "ex": "aussie",
+      "sets": [
+       {
+        "reps": 12,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 12,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 12,
+        "weight": 0,
+        "done": true
+       }
+      ]
+     },
+     {
+      "ex": "hollow",
+      "sets": [
+       {
+        "time": 28,
+        "done": true
+       },
+       {
+        "time": 29,
+        "done": true
+       },
+       {
+        "time": 28,
+        "done": true
+       }
+      ]
+     }
+    ],
+    "feel": 4,
+    "pain": false,
+    "light": false,
+    "notes": "",
+    "completed": true,
+    "warmup": true
+   },
+   {
+    "id": "mvy2ox4jgre5y13",
+    "date": "2026-08-27",
+    "startedAt": 1787858040000,
+    "title": "INTERMEDIATE · Тренировка B",
+    "source": "program",
+    "ref": {
+     "prog": "intermediate",
+     "idx": 1,
+     "w": "B"
+    },
+    "durationSec": 2220,
+    "items": [
+     {
+      "ex": "ladder",
+      "sets": [
+       {
+        "reps": 1,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 2,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 3,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 4,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 1,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 2,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 3,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 4,
+        "weight": 0,
+        "done": true
+       }
+      ]
+     },
+     {
+      "ex": "chinup",
+      "sets": [
+       {
+        "reps": 4,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 4,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 3,
+        "weight": 0,
+        "done": true
+       }
+      ]
+     },
+     {
+      "ex": "dips",
+      "sets": [
+       {
+        "reps": 8,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 8,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 7,
+        "weight": 0,
+        "done": true
+       }
+      ]
+     },
+     {
+      "ex": "kneeraise",
+      "sets": [
+       {
+        "reps": 10,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 10,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 10,
+        "weight": 0,
+        "done": true
+       }
+      ]
+     }
+    ],
+    "feel": 3,
+    "pain": false,
+    "light": false,
+    "notes": "",
+    "completed": true,
+    "warmup": true
+   },
+   {
+    "id": "mvy2ox4jdp8spq1",
+    "date": "2026-08-29",
+    "startedAt": 1788004800000,
+    "title": "Быстрые подтягивания",
+    "source": "quick",
+    "ref": null,
+    "durationSec": 0,
+    "items": [
+     {
+      "ex": "pullup",
+      "sets": [
+       {
+        "reps": 5,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 4,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 5,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 6,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 3,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 4,
+        "weight": 0,
+        "done": true
+       }
+      ]
+     }
+    ],
+    "feel": 0,
+    "pain": false,
+    "notes": "",
+    "completed": true,
+    "warmup": false
+   },
+   {
+    "id": "mvy2ox4j716bq20",
+    "date": "2026-08-31",
+    "startedAt": 1788160440000,
+    "title": "INTERMEDIATE · Тренировка C",
+    "source": "program",
+    "ref": {
+     "prog": "intermediate",
+     "idx": 2,
+     "w": "C"
+    },
+    "durationSec": 2160,
+    "items": [
+     {
+      "ex": "pause",
+      "sets": [
+       {
+        "reps": 3,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 3,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 3,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 3,
+        "weight": 0,
+        "done": true
+       }
+      ]
+     },
+     {
+      "ex": "close",
+      "sets": [
+       {
+        "reps": 3,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 3,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 2,
+        "weight": 0,
+        "done": true
+       }
+      ]
+     },
+     {
+      "ex": "towel",
+      "sets": [
+       {
+        "time": 20,
+        "done": true
+       },
+       {
+        "time": 27,
+        "done": true
+       },
+       {
+        "time": 25,
+        "done": true
+       }
+      ]
+     },
+     {
+      "ex": "pushup",
+      "sets": [
+       {
+        "reps": 12,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 12,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 11,
+        "weight": 0,
+        "done": true
+       }
+      ]
+     },
+     {
+      "ex": "facepull",
+      "sets": [
+       {
+        "reps": 15,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 14,
+        "weight": 0,
+        "done": true
+       }
+      ]
+     }
+    ],
+    "feel": 5,
+    "pain": false,
+    "light": false,
+    "notes": "",
+    "completed": true,
+    "warmup": true
+   },
+   {
+    "id": "mvy2ox4j6li0k23",
+    "date": "2026-09-03",
+    "startedAt": 1788458880000,
+    "title": "INTERMEDIATE · Тренировка A",
+    "source": "program",
+    "ref": {
+     "prog": "intermediate",
+     "idx": 0,
+     "w": "A"
+    },
+    "durationSec": 2760,
+    "items": [
+     {
+      "ex": "pullup",
+      "sets": [
+       {
+        "reps": 4,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 4,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 4,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 4,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 3,
+        "weight": 0,
+        "done": true
+       }
+      ]
+     },
+     {
+      "ex": "negative",
+      "sets": [
+       {
+        "reps": 3,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 3,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 3,
+        "weight": 0,
+        "done": true
+       }
+      ]
+     },
+     {
+      "ex": "aussie",
+      "sets": [
+       {
+        "reps": 12,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 12,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 12,
+        "weight": 0,
+        "done": true
+       }
+      ]
+     },
+     {
+      "ex": "hollow",
+      "sets": [
+       {
+        "time": 29,
+        "done": true
+       },
+       {
+        "time": 34,
+        "done": true
+       },
+       {
+        "time": 38,
+        "done": true
+       }
+      ]
+     }
+    ],
+    "feel": 5,
+    "pain": false,
+    "light": false,
+    "notes": "",
+    "completed": true,
+    "warmup": true
+   },
+   {
+    "id": "mvy2ox4j6wqgjq2",
+    "date": "2026-09-05",
+    "startedAt": 1788609600000,
+    "title": "Быстрые подтягивания",
+    "source": "quick",
+    "ref": null,
+    "durationSec": 0,
+    "items": [
+     {
+      "ex": "pullup",
+      "sets": [
+       {
+        "reps": 4,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 6,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 5,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 6,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 4,
+        "weight": 0,
+        "done": true
+       }
+      ]
+     }
+    ],
+    "feel": 0,
+    "pain": false,
+    "notes": "",
+    "completed": true,
+    "warmup": false
+   },
+   {
+    "id": "mvy2ox4j9xdgb30",
+    "date": "2026-09-07",
+    "startedAt": 1788805140000,
+    "title": "INTERMEDIATE · Тренировка B",
+    "source": "program",
+    "ref": {
+     "prog": "intermediate",
+     "idx": 1,
+     "w": "B"
+    },
+    "durationSec": 3000,
+    "items": [
+     {
+      "ex": "ladder",
+      "sets": [
+       {
+        "reps": 1,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 2,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 3,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 4,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 1,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 2,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 3,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 4,
+        "weight": 0,
+        "done": true
+       }
+      ]
+     },
+     {
+      "ex": "chinup",
+      "sets": [
+       {
+        "reps": 4,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 4,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 3,
+        "weight": 0,
+        "done": true
+       }
+      ]
+     },
+     {
+      "ex": "dips",
+      "sets": [
+       {
+        "reps": 8,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 8,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 8,
+        "weight": 0,
+        "done": true
+       }
+      ]
+     },
+     {
+      "ex": "kneeraise",
+      "sets": [
+       {
+        "reps": 10,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 10,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 9,
+        "weight": 0,
+        "done": true
+       }
+      ]
+     }
+    ],
+    "feel": 5,
+    "pain": false,
+    "light": false,
+    "notes": "",
+    "completed": true,
+    "warmup": true
+   },
+   {
+    "id": "mvy2ox4juw11232",
+    "date": "2026-09-09",
+    "startedAt": 1788978000000,
+    "title": "INTERMEDIATE · Тренировка C",
+    "source": "program",
+    "ref": {
+     "prog": "intermediate",
+     "idx": 2,
+     "w": "C"
+    },
+    "durationSec": 2520,
+    "items": [
+     {
+      "ex": "pause",
+      "sets": [
+       {
+        "reps": 3,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 3,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 3,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 2,
+        "weight": 0,
+        "done": true
+       }
+      ]
+     },
+     {
+      "ex": "close",
+      "sets": [
+       {
+        "reps": 4,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 4,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 4,
+        "weight": 0,
+        "done": true
+       }
+      ]
+     },
+     {
+      "ex": "towel",
+      "sets": [
+       {
+        "time": 24,
+        "done": true
+       },
+       {
+        "time": 23,
+        "done": true
+       },
+       {
+        "time": 27,
+        "done": true
+       }
+      ]
+     },
+     {
+      "ex": "pushup",
+      "sets": [
+       {
+        "reps": 12,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 12,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 11,
+        "weight": 0,
+        "done": true
+       }
+      ]
+     },
+     {
+      "ex": "facepull",
+      "sets": [
+       {
+        "reps": 15,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 14,
+        "weight": 0,
+        "done": true
+       }
+      ]
+     }
+    ],
+    "feel": 5,
+    "pain": false,
+    "light": false,
+    "notes": "",
+    "completed": true,
+    "warmup": true
+   },
+   {
+    "id": "mvy2ox4j7jcn734",
+    "date": "2026-09-11",
+    "startedAt": 1789151640000,
+    "title": "INTERMEDIATE · Тренировка A",
+    "source": "program",
+    "ref": {
+     "prog": "intermediate",
+     "idx": 0,
+     "w": "A"
+    },
+    "durationSec": 2580,
+    "items": [
+     {
+      "ex": "pullup",
+      "sets": [
+       {
+        "reps": 4,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 4,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 4,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 4,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 4,
+        "weight": 0,
+        "done": true
+       }
+      ]
+     },
+     {
+      "ex": "negative",
+      "sets": [
+       {
+        "reps": 3,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 3,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 3,
+        "weight": 0,
+        "done": true
+       }
+      ]
+     },
+     {
+      "ex": "aussie",
+      "sets": [
+       {
+        "reps": 12,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 12,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 11,
+        "weight": 0,
+        "done": true
+       }
+      ]
+     },
+     {
+      "ex": "hollow",
+      "sets": [
+       {
+        "time": 37,
+        "done": true
+       },
+       {
+        "time": 32,
+        "done": true
+       },
+       {
+        "time": 33,
+        "done": true
+       }
+      ]
+     }
+    ],
+    "feel": 4,
+    "pain": false,
+    "light": false,
+    "notes": "",
+    "completed": true,
+    "warmup": false
+   },
+   {
+    "id": "mvy2ox4jqmxp840",
+    "date": "2026-09-14",
+    "startedAt": 1789406940000,
+    "title": "INTERMEDIATE · Тренировка B",
+    "source": "program",
+    "ref": {
+     "prog": "intermediate",
+     "idx": 1,
+     "w": "B"
+    },
+    "durationSec": 2940,
+    "items": [
+     {
+      "ex": "ladder",
+      "sets": [
+       {
+        "reps": 1,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 2,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 3,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 4,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 1,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 2,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 3,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 4,
+        "weight": 0,
+        "done": true
+       }
+      ]
+     },
+     {
+      "ex": "chinup",
+      "sets": [
+       {
+        "reps": 4,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 4,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 4,
+        "weight": 0,
+        "done": true
+       }
+      ]
+     },
+     {
+      "ex": "dips",
+      "sets": [
+       {
+        "reps": 8,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 8,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 8,
+        "weight": 0,
+        "done": true
+       }
+      ]
+     },
+     {
+      "ex": "kneeraise",
+      "sets": [
+       {
+        "reps": 10,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 10,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 9,
+        "weight": 0,
+        "done": true
+       }
+      ]
+     }
+    ],
+    "feel": 3,
+    "pain": false,
+    "light": false,
+    "notes": "",
+    "completed": true,
+    "warmup": true
+   },
+   {
+    "id": "mvy2ox4ju37p943",
+    "date": "2026-09-17",
+    "startedAt": 1789671840000,
+    "title": "INTERMEDIATE · Тренировка C",
+    "source": "program",
+    "ref": {
+     "prog": "intermediate",
+     "idx": 2,
+     "w": "C"
+    },
+    "durationSec": 2640,
+    "items": [
+     {
+      "ex": "pause",
+      "sets": [
+       {
+        "reps": 3,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 3,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 3,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 2,
+        "weight": 0,
+        "done": true
+       }
+      ]
+     },
+     {
+      "ex": "close",
+      "sets": [
+       {
+        "reps": 4,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 4,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 3,
+        "weight": 0,
+        "done": true
+       }
+      ]
+     },
+     {
+      "ex": "towel",
+      "sets": [
+       {
+        "time": 22,
+        "done": true
+       },
+       {
+        "time": 28,
+        "done": true
+       },
+       {
+        "time": 25,
+        "done": true
+       }
+      ]
+     },
+     {
+      "ex": "pushup",
+      "sets": [
+       {
+        "reps": 12,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 12,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 12,
+        "weight": 0,
+        "done": true
+       }
+      ]
+     },
+     {
+      "ex": "facepull",
+      "sets": [
+       {
+        "reps": 15,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 15,
+        "weight": 0,
+        "done": true
+       }
+      ]
+     }
+    ],
+    "feel": 3,
+    "pain": false,
+    "light": false,
+    "notes": "",
+    "completed": true,
+    "warmup": true
+   },
+   {
+    "id": "mvy2ox4j2fvewq4",
+    "date": "2026-09-19",
+    "startedAt": 1789819200000,
+    "title": "Быстрые подтягивания",
+    "source": "quick",
+    "ref": null,
+    "durationSec": 0,
+    "items": [
+     {
+      "ex": "pullup",
+      "sets": [
+       {
+        "reps": 3,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 5,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 5,
+        "weight": 0,
+        "done": true
+       }
+      ]
+     }
+    ],
+    "feel": 0,
+    "pain": false,
+    "notes": "",
+    "completed": true,
+    "warmup": false
+   },
+   {
+    "id": "mvy2ox4juf9ey50",
+    "date": "2026-09-21",
+    "startedAt": 1790015400000,
+    "title": "INTERMEDIATE · Тренировка A",
+    "source": "program",
+    "ref": {
+     "prog": "intermediate",
+     "idx": 0,
+     "w": "A"
+    },
+    "durationSec": 2640,
+    "items": [
+     {
+      "ex": "pullup",
+      "sets": [
+       {
+        "reps": 5,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 5,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 5,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 5,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 4,
+        "weight": 0,
+        "done": true
+       }
+      ]
+     },
+     {
+      "ex": "negative",
+      "sets": [
+       {
+        "reps": 3,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 3,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 3,
+        "weight": 0,
+        "done": true
+       }
+      ]
+     },
+     {
+      "ex": "aussie",
+      "sets": [
+       {
+        "reps": 12,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 12,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 12,
+        "weight": 0,
+        "done": true
+       }
+      ]
+     },
+     {
+      "ex": "hollow",
+      "sets": [
+       {
+        "time": 33,
+        "done": true
+       },
+       {
+        "time": 33,
+        "done": true
+       },
+       {
+        "time": 34,
+        "done": true
+       }
+      ]
+     }
+    ],
+    "feel": 4,
+    "pain": false,
+    "light": false,
+    "notes": "",
+    "completed": true,
+    "warmup": true
+   },
+   {
+    "id": "mvy2ox4jw817t52",
+    "date": "2026-09-23",
+    "startedAt": 1790183940000,
+    "title": "INTERMEDIATE · Тренировка B",
+    "source": "program",
+    "ref": {
+     "prog": "intermediate",
+     "idx": 1,
+     "w": "B"
+    },
+    "durationSec": 2700,
+    "items": [
+     {
+      "ex": "ladder",
+      "sets": [
+       {
+        "reps": 1,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 2,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 3,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 4,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 1,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 2,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 3,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 4,
+        "weight": 0,
+        "done": true
+       }
+      ]
+     },
+     {
+      "ex": "chinup",
+      "sets": [
+       {
+        "reps": 5,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 5,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 5,
+        "weight": 0,
+        "done": true
+       }
+      ]
+     },
+     {
+      "ex": "dips",
+      "sets": [
+       {
+        "reps": 8,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 8,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 7,
+        "weight": 0,
+        "done": true
+       }
+      ]
+     },
+     {
+      "ex": "kneeraise",
+      "sets": [
+       {
+        "reps": 10,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 10,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 10,
+        "weight": 0,
+        "done": true
+       }
+      ]
+     }
+    ],
+    "feel": 3,
+    "pain": false,
+    "light": false,
+    "notes": "",
+    "completed": true,
+    "warmup": true
+   },
+   {
+    "id": "mvy2ox4jfg0w854",
+    "date": "2026-09-25",
+    "startedAt": 1790355600000,
+    "title": "INTERMEDIATE · Тренировка C",
+    "source": "program",
+    "ref": {
+     "prog": "intermediate",
+     "idx": 2,
+     "w": "C"
+    },
+    "durationSec": 2940,
+    "items": [
+     {
+      "ex": "pause",
+      "sets": [
+       {
+        "reps": 3,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 3,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 3,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 2,
+        "weight": 0,
+        "done": true
+       }
+      ]
+     },
+     {
+      "ex": "close",
+      "sets": [
+       {
+        "reps": 4,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 4,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 3,
+        "weight": 0,
+        "done": true
+       }
+      ]
+     },
+     {
+      "ex": "towel",
+      "sets": [
+       {
+        "time": 30,
+        "done": true
+       },
+       {
+        "time": 31,
+        "done": true
+       },
+       {
+        "time": 29,
+        "done": true
+       }
+      ]
+     },
+     {
+      "ex": "pushup",
+      "sets": [
+       {
+        "reps": 12,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 12,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 11,
+        "weight": 0,
+        "done": true
+       }
+      ]
+     },
+     {
+      "ex": "facepull",
+      "sets": [
+       {
+        "reps": 15,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 14,
+        "weight": 0,
+        "done": true
+       }
+      ]
+     }
+    ],
+    "feel": 5,
+    "pain": false,
+    "light": false,
+    "notes": "",
+    "completed": true,
+    "warmup": true
+   },
+   {
+    "id": "mvy2ox4jneo4aq5",
+    "date": "2026-09-26",
+    "startedAt": 1790424000000,
+    "title": "Быстрые подтягивания",
+    "source": "quick",
+    "ref": null,
+    "durationSec": 0,
+    "items": [
+     {
+      "ex": "pullup",
+      "sets": [
+       {
+        "reps": 5,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 3,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 3,
+        "weight": 0,
+        "done": true
+       }
+      ]
+     }
+    ],
+    "feel": 0,
+    "pain": false,
+    "notes": "",
+    "completed": true,
+    "warmup": false
+   },
+   {
+    "id": "mvy2ox4jd1k1k60",
+    "date": "2026-09-28",
+    "startedAt": 1790617800000,
+    "title": "INTERMEDIATE · Тренировка A",
+    "source": "program",
+    "ref": {
+     "prog": "intermediate",
+     "idx": 0,
+     "w": "A"
+    },
+    "durationSec": 2160,
+    "items": [
+     {
+      "ex": "pullup",
+      "sets": [
+       {
+        "reps": 5,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 5,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 5,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 5,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 4,
+        "weight": 0,
+        "done": true
+       }
+      ]
+     },
+     {
+      "ex": "negative",
+      "sets": [
+       {
+        "reps": 4,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 4,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 4,
+        "weight": 0,
+        "done": true
+       }
+      ]
+     },
+     {
+      "ex": "aussie",
+      "sets": [
+       {
+        "reps": 13,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 13,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 12,
+        "weight": 0,
+        "done": true
+       }
+      ]
+     },
+     {
+      "ex": "hollow",
+      "sets": [
+       {
+        "time": 36,
+        "done": true
+       },
+       {
+        "time": 40,
+        "done": true
+       },
+       {
+        "time": 39,
+        "done": true
+       }
+      ]
+     }
+    ],
+    "feel": 5,
+    "pain": false,
+    "light": false,
+    "notes": "",
+    "completed": true,
+    "warmup": true
+   },
+   {
+    "id": "mvy2ox4jbteit62",
+    "date": "2026-09-30",
+    "startedAt": 1790795280000,
+    "title": "INTERMEDIATE · Тренировка B",
+    "source": "program",
+    "ref": {
+     "prog": "intermediate",
+     "idx": 1,
+     "w": "B"
+    },
+    "durationSec": 2220,
+    "items": [
+     {
+      "ex": "ladder",
+      "sets": [
+       {
+        "reps": 1,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 2,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 3,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 4,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 1,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 2,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 3,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 4,
+        "weight": 0,
+        "done": true
+       }
+      ]
+     },
+     {
+      "ex": "chinup",
+      "sets": [
+       {
+        "reps": 5,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 5,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 4,
+        "weight": 0,
+        "done": true
+       }
+      ]
+     },
+     {
+      "ex": "dips",
+      "sets": [
+       {
+        "reps": 9,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 9,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 9,
+        "weight": 0,
+        "done": true
+       }
+      ]
+     },
+     {
+      "ex": "kneeraise",
+      "sets": [
+       {
+        "reps": 11,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 11,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 11,
+        "weight": 0,
+        "done": true
+       }
+      ]
+     }
+    ],
+    "feel": 3,
+    "pain": false,
+    "light": false,
+    "notes": "Хорошая техника, последний подход тяжело.",
+    "completed": true,
+    "warmup": true
+   },
+   {
+    "id": "mvy2ox4jq12b164",
+    "date": "2026-10-02",
+    "startedAt": 1790966640000,
+    "title": "INTERMEDIATE · Тренировка C",
+    "source": "program",
+    "ref": {
+     "prog": "intermediate",
+     "idx": 2,
+     "w": "C"
+    },
+    "durationSec": 3060,
+    "items": [
+     {
+      "ex": "pause",
+      "sets": [
+       {
+        "reps": 4,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 4,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 4,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 3,
+        "weight": 0,
+        "done": true
+       }
+      ]
+     },
+     {
+      "ex": "close",
+      "sets": [
+       {
+        "reps": 5,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 5,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 5,
+        "weight": 0,
+        "done": true
+       }
+      ]
+     },
+     {
+      "ex": "towel",
+      "sets": [
+       {
+        "time": 24,
+        "done": true
+       },
+       {
+        "time": 31,
+        "done": true
+       },
+       {
+        "time": 25,
+        "done": true
+       }
+      ]
+     },
+     {
+      "ex": "pushup",
+      "sets": [
+       {
+        "reps": 13,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 13,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 12,
+        "weight": 0,
+        "done": true
+       }
+      ]
+     },
+     {
+      "ex": "facepull",
+      "sets": [
+       {
+        "reps": 16,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 15,
+        "weight": 0,
+        "done": true
+       }
+      ]
+     }
+    ],
+    "feel": 5,
+    "pain": false,
+    "light": false,
+    "notes": "",
+    "completed": true,
+    "warmup": false
+   },
+   {
+    "id": "mvy2ox4jfyjjsq6",
+    "date": "2026-10-03",
+    "startedAt": 1791028800000,
+    "title": "Быстрые подтягивания",
+    "source": "quick",
+    "ref": null,
+    "durationSec": 0,
+    "items": [
+     {
+      "ex": "pullup",
+      "sets": [
+       {
+        "reps": 5,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 5,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 5,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 3,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 6,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 5,
+        "weight": 0,
+        "done": true
+       }
+      ]
+     }
+    ],
+    "feel": 0,
+    "pain": false,
+    "notes": "",
+    "completed": true,
+    "warmup": false
+   },
+   {
+    "id": "mvy2ox4j2rkuv70",
+    "date": "2026-10-05",
+    "startedAt": 1791221760000,
+    "title": "INTERMEDIATE · Тренировка A",
+    "source": "program",
+    "ref": {
+     "prog": "intermediate",
+     "idx": 0,
+     "w": "A"
+    },
+    "durationSec": 3000,
+    "items": [
+     {
+      "ex": "pullup",
+      "sets": [
+       {
+        "reps": 5,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 5,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 5,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 5,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 5,
+        "weight": 0,
+        "done": true
+       }
+      ]
+     },
+     {
+      "ex": "negative",
+      "sets": [
+       {
+        "reps": 4,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 4,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 4,
+        "weight": 0,
+        "done": true
+       }
+      ]
+     },
+     {
+      "ex": "aussie",
+      "sets": [
+       {
+        "reps": 13,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 13,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 12,
+        "weight": 0,
+        "done": true
+       }
+      ]
+     },
+     {
+      "ex": "hollow",
+      "sets": [
+       {
+        "time": 41,
+        "done": true
+       },
+       {
+        "time": 42,
+        "done": true
+       },
+       {
+        "time": 34,
+        "done": true
+       }
+      ]
+     }
+    ],
+    "feel": 4,
+    "pain": false,
+    "light": false,
+    "notes": "",
+    "completed": true,
+    "warmup": true
+   },
+   {
+    "id": "mvy2ox4jtdgpu72",
+    "date": "2026-10-07",
+    "startedAt": 1791394620000,
+    "title": "INTERMEDIATE · Тренировка B",
+    "source": "program",
+    "ref": {
+     "prog": "intermediate",
+     "idx": 1,
+     "w": "B"
+    },
+    "durationSec": 2280,
+    "items": [
+     {
+      "ex": "ladder",
+      "sets": [
+       {
+        "reps": 1,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 2,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 3,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 4,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 1,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 2,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 3,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 4,
+        "weight": 0,
+        "done": true
+       }
+      ]
+     },
+     {
+      "ex": "chinup",
+      "sets": [
+       {
+        "reps": 5,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 5,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 5,
+        "weight": 0,
+        "done": true
+       }
+      ]
+     },
+     {
+      "ex": "dips",
+      "sets": [
+       {
+        "reps": 9,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 9,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 9,
+        "weight": 0,
+        "done": true
+       }
+      ]
+     },
+     {
+      "ex": "kneeraise",
+      "sets": [
+       {
+        "reps": 11,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 11,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 10,
+        "weight": 0,
+        "done": true
+       }
+      ]
+     }
+    ],
+    "feel": 5,
+    "pain": false,
+    "light": false,
+    "notes": "",
+    "completed": true,
+    "warmup": true
+   },
+   {
+    "id": "mvy2ox4j9zxa174",
+    "date": "2026-10-09",
+    "startedAt": 1791573900000,
+    "title": "INTERMEDIATE · Тренировка C",
+    "source": "program",
+    "ref": {
+     "prog": "intermediate",
+     "idx": 2,
+     "w": "C"
+    },
+    "durationSec": 2760,
+    "items": [
+     {
+      "ex": "pause",
+      "sets": [
+       {
+        "reps": 4,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 4,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 4,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 3,
+        "weight": 0,
+        "done": true
+       }
+      ]
+     },
+     {
+      "ex": "close",
+      "sets": [
+       {
+        "reps": 5,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 5,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 5,
+        "weight": 0,
+        "done": true
+       }
+      ]
+     },
+     {
+      "ex": "towel",
+      "sets": [
+       {
+        "time": 29,
+        "done": true
+       },
+       {
+        "time": 31,
+        "done": true
+       },
+       {
+        "time": 24,
+        "done": true
+       }
+      ]
+     },
+     {
+      "ex": "pushup",
+      "sets": [
+       {
+        "reps": 13,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 13,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 12,
+        "weight": 0,
+        "done": true
+       }
+      ]
+     },
+     {
+      "ex": "facepull",
+      "sets": [
+       {
+        "reps": 16,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 15,
+        "weight": 0,
+        "done": true
+       }
+      ]
+     }
+    ],
+    "feel": 5,
+    "pain": false,
+    "light": false,
+    "notes": "",
+    "completed": true,
+    "warmup": true
+   },
+   {
+    "id": "mvy2ox4jat815q7",
+    "date": "2026-10-10",
+    "startedAt": 1791633600000,
+    "title": "Быстрые подтягивания",
+    "source": "quick",
+    "ref": null,
+    "durationSec": 0,
+    "items": [
+     {
+      "ex": "pullup",
+      "sets": [
+       {
+        "reps": 3,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 5,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 5,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 4,
+        "weight": 0,
+        "done": true
+       }
+      ]
+     }
+    ],
+    "feel": 0,
+    "pain": false,
+    "notes": "",
+    "completed": true,
+    "warmup": false
+   },
+   {
+    "id": "mvy2ox4jxp8pw80",
+    "date": "2026-10-12",
+    "startedAt": 1791832440000,
+    "title": "INTERMEDIATE · Тренировка A",
+    "source": "program",
+    "ref": {
+     "prog": "intermediate",
+     "idx": 0,
+     "w": "A"
+    },
+    "durationSec": 2940,
+    "items": [
+     {
+      "ex": "pullup",
+      "sets": [
+       {
+        "reps": 6,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 6,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 6,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 6,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 5,
+        "weight": 0,
+        "done": true
+       }
+      ]
+     },
+     {
+      "ex": "negative",
+      "sets": [
+       {
+        "reps": 4,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 4,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 4,
+        "weight": 0,
+        "done": true
+       }
+      ]
+     },
+     {
+      "ex": "aussie",
+      "sets": [
+       {
+        "reps": 13,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 13,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 12,
+        "weight": 0,
+        "done": true
+       }
+      ]
+     },
+     {
+      "ex": "hollow",
+      "sets": [
+       {
+        "time": 40,
+        "done": true
+       },
+       {
+        "time": 39,
+        "done": true
+       },
+       {
+        "time": 36,
+        "done": true
+       }
+      ]
+     }
+    ],
+    "feel": 3,
+    "pain": false,
+    "light": false,
+    "notes": "",
+    "completed": true,
+    "warmup": true
+   },
+   {
+    "id": "mvy2ox4jokbmr82",
+    "date": "2026-10-14",
+    "startedAt": 1792003440000,
+    "title": "INTERMEDIATE · Тренировка B",
+    "source": "program",
+    "ref": {
+     "prog": "intermediate",
+     "idx": 1,
+     "w": "B"
+    },
+    "durationSec": 2580,
+    "items": [
+     {
+      "ex": "ladder",
+      "sets": [
+       {
+        "reps": 1,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 2,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 3,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 4,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 1,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 2,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 3,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 4,
+        "weight": 0,
+        "done": true
+       }
+      ]
+     },
+     {
+      "ex": "chinup",
+      "sets": [
+       {
+        "reps": 6,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 6,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 6,
+        "weight": 0,
+        "done": true
+       }
+      ]
+     },
+     {
+      "ex": "dips",
+      "sets": [
+       {
+        "reps": 9,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 9,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 9,
+        "weight": 0,
+        "done": true
+       }
+      ]
+     },
+     {
+      "ex": "kneeraise",
+      "sets": [
+       {
+        "reps": 11,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 11,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 10,
+        "weight": 0,
+        "done": true
+       }
+      ]
+     }
+    ],
+    "feel": 5,
+    "pain": false,
+    "light": false,
+    "notes": "",
+    "completed": true,
+    "warmup": true
+   },
+   {
+    "id": "mvy2ox4jmeabs84",
+    "date": "2026-10-16",
+    "startedAt": 1792171800000,
+    "title": "INTERMEDIATE · Тренировка C",
+    "source": "program",
+    "ref": {
+     "prog": "intermediate",
+     "idx": 2,
+     "w": "C"
+    },
+    "durationSec": 2640,
+    "items": [
+     {
+      "ex": "pause",
+      "sets": [
+       {
+        "reps": 4,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 4,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 4,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 3,
+        "weight": 0,
+        "done": true
+       }
+      ]
+     },
+     {
+      "ex": "close",
+      "sets": [
+       {
+        "reps": 5,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 5,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 5,
+        "weight": 0,
+        "done": true
+       }
+      ]
+     },
+     {
+      "ex": "towel",
+      "sets": [
+       {
+        "time": 30,
+        "done": true
+       },
+       {
+        "time": 33,
+        "done": true
+       },
+       {
+        "time": 27,
+        "done": true
+       }
+      ]
+     },
+     {
+      "ex": "pushup",
+      "sets": [
+       {
+        "reps": 13,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 13,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 12,
+        "weight": 0,
+        "done": true
+       }
+      ]
+     },
+     {
+      "ex": "facepull",
+      "sets": [
+       {
+        "reps": 16,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 15,
+        "weight": 0,
+        "done": true
+       }
+      ]
+     }
+    ],
+    "feel": 3,
+    "pain": false,
+    "light": false,
+    "notes": "",
+    "completed": true,
+    "warmup": true
+   },
+   {
+    "id": "mvy2ox4jlciunq8",
+    "date": "2026-10-17",
+    "startedAt": 1792238400000,
+    "title": "Быстрые подтягивания",
+    "source": "quick",
+    "ref": null,
+    "durationSec": 0,
+    "items": [
+     {
+      "ex": "pullup",
+      "sets": [
+       {
+        "reps": 4,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 3,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 4,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 4,
+        "weight": 0,
+        "done": true
+       }
+      ]
+     }
+    ],
+    "feel": 0,
+    "pain": false,
+    "notes": "",
+    "completed": true,
+    "warmup": false
+   },
+   {
+    "id": "mvy2ox4j1joon90",
+    "date": "2026-10-19",
+    "startedAt": 1792433700000,
+    "title": "INTERMEDIATE · Тренировка A",
+    "source": "program",
+    "ref": {
+     "prog": "intermediate",
+     "idx": 0,
+     "w": "A"
+    },
+    "durationSec": 3060,
+    "items": [
+     {
+      "ex": "pullup",
+      "sets": [
+       {
+        "reps": 7,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 7,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 7,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 7,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 6,
+        "weight": 0,
+        "done": true
+       }
+      ]
+     },
+     {
+      "ex": "negative",
+      "sets": [
+       {
+        "reps": 4,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 4,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 4,
+        "weight": 0,
+        "done": true
+       }
+      ]
+     },
+     {
+      "ex": "aussie",
+      "sets": [
+       {
+        "reps": 13,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 13,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 13,
+        "weight": 0,
+        "done": true
+       }
+      ]
+     },
+     {
+      "ex": "hollow",
+      "sets": [
+       {
+        "time": 45,
+        "done": true
+       },
+       {
+        "time": 38,
+        "done": true
+       },
+       {
+        "time": 40,
+        "done": true
+       }
+      ]
+     }
+    ],
+    "feel": 3,
+    "pain": false,
+    "light": false,
+    "notes": "Хорошая техника, последний подход тяжело.",
+    "completed": true,
+    "warmup": true
+   },
+   {
+    "id": "mvy2ox4jcrgfh92",
+    "date": "2026-10-21",
+    "startedAt": 1792607340000,
+    "title": "INTERMEDIATE · Тренировка B",
+    "source": "program",
+    "ref": {
+     "prog": "intermediate",
+     "idx": 1,
+     "w": "B"
+    },
+    "durationSec": 2700,
+    "items": [
+     {
+      "ex": "ladder",
+      "sets": [
+       {
+        "reps": 1,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 2,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 3,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 4,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 1,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 2,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 3,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 4,
+        "weight": 0,
+        "done": true
+       }
+      ]
+     },
+     {
+      "ex": "chinup",
+      "sets": [
+       {
+        "reps": 7,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 7,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 7,
+        "weight": 0,
+        "done": true
+       }
+      ]
+     },
+     {
+      "ex": "dips",
+      "sets": [
+       {
+        "reps": 9,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 9,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 8,
+        "weight": 0,
+        "done": true
+       }
+      ]
+     },
+     {
+      "ex": "kneeraise",
+      "sets": [
+       {
+        "reps": 11,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 11,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 11,
+        "weight": 0,
+        "done": true
+       }
+      ]
+     }
+    ],
+    "feel": 3,
+    "pain": false,
+    "light": false,
+    "notes": "",
+    "completed": true,
+    "warmup": false
+   },
+   {
+    "id": "mvy2ox4jk4y5194",
+    "date": "2026-10-23",
+    "startedAt": 1792782660000,
+    "title": "INTERMEDIATE · Тренировка C",
+    "source": "program",
+    "ref": {
+     "prog": "intermediate",
+     "idx": 2,
+     "w": "C"
+    },
+    "durationSec": 2640,
+    "items": [
+     {
+      "ex": "pause",
+      "sets": [
+       {
+        "reps": 4,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 4,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 4,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 3,
+        "weight": 0,
+        "done": true
+       }
+      ]
+     },
+     {
+      "ex": "close",
+      "sets": [
+       {
+        "reps": 6,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 6,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 5,
+        "weight": 0,
+        "done": true
+       }
+      ]
+     },
+     {
+      "ex": "towel",
+      "sets": [
+       {
+        "time": 28,
+        "done": true
+       },
+       {
+        "time": 26,
+        "done": true
+       },
+       {
+        "time": 28,
+        "done": true
+       }
+      ]
+     },
+     {
+      "ex": "pushup",
+      "sets": [
+       {
+        "reps": 13,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 13,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 13,
+        "weight": 0,
+        "done": true
+       }
+      ]
+     },
+     {
+      "ex": "facepull",
+      "sets": [
+       {
+        "reps": 16,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 15,
+        "weight": 0,
+        "done": true
+       }
+      ]
+     }
+    ],
+    "feel": 4,
+    "pain": false,
+    "light": false,
+    "notes": "",
+    "completed": true,
+    "warmup": true
+   },
+   {
+    "id": "mvy2ox4jp50nwq9",
+    "date": "2026-10-24",
+    "startedAt": 1792843200000,
+    "title": "Быстрые подтягивания",
+    "source": "quick",
+    "ref": null,
+    "durationSec": 0,
+    "items": [
+     {
+      "ex": "pullup",
+      "sets": [
+       {
+        "reps": 5,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 6,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 6,
+        "weight": 0,
+        "done": true
+       }
+      ]
+     }
+    ],
+    "feel": 0,
+    "pain": false,
+    "notes": "",
+    "completed": true,
+    "warmup": false
+   },
+   {
+    "id": "mvy2ox4j1qfie100",
+    "date": "2026-10-26",
+    "startedAt": 1793043600000,
+    "title": "INTERMEDIATE · Тренировка A",
+    "source": "program",
+    "ref": {
+     "prog": "intermediate",
+     "idx": 0,
+     "w": "A"
+    },
+    "durationSec": 2340,
+    "items": [
+     {
+      "ex": "pullup",
+      "sets": [
+       {
+        "reps": 7,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 7,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 7,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 7,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 6,
+        "weight": 0,
+        "done": true
+       }
+      ]
+     },
+     {
+      "ex": "negative",
+      "sets": [
+       {
+        "reps": 4,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 4,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 3,
+        "weight": 0,
+        "done": true
+       }
+      ]
+     },
+     {
+      "ex": "aussie",
+      "sets": [
+       {
+        "reps": 13,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 13,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 12,
+        "weight": 0,
+        "done": true
+       }
+      ]
+     },
+     {
+      "ex": "hollow",
+      "sets": [
+       {
+        "time": 45,
+        "done": true
+       },
+       {
+        "time": 46,
+        "done": true
+       },
+       {
+        "time": 41,
+        "done": true
+       }
+      ]
+     }
+    ],
+    "feel": 4,
+    "pain": false,
+    "light": false,
+    "notes": "",
+    "completed": true,
+    "warmup": true
+   },
+   {
+    "id": "mvy2ox4jcekgv102",
+    "date": "2026-10-28",
+    "startedAt": 1793215980000,
+    "title": "INTERMEDIATE · Тренировка B",
+    "source": "program",
+    "ref": {
+     "prog": "intermediate",
+     "idx": 1,
+     "w": "B"
+    },
+    "durationSec": 2280,
+    "items": [
+     {
+      "ex": "ladder",
+      "sets": [
+       {
+        "reps": 1,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 2,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 3,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 4,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 1,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 2,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 3,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 4,
+        "weight": 0,
+        "done": true
+       }
+      ]
+     },
+     {
+      "ex": "chinup",
+      "sets": [
+       {
+        "reps": 7,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 7,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 6,
+        "weight": 0,
+        "done": true
+       }
+      ]
+     },
+     {
+      "ex": "dips",
+      "sets": [
+       {
+        "reps": 9,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 9,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 8,
+        "weight": 0,
+        "done": true
+       }
+      ]
+     },
+     {
+      "ex": "kneeraise",
+      "sets": [
+       {
+        "reps": 11,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 11,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 10,
+        "weight": 0,
+        "done": true
+       }
+      ]
+     }
+    ],
+    "feel": 5,
+    "pain": false,
+    "light": false,
+    "notes": "",
+    "completed": true,
+    "warmup": true
+   },
+   {
+    "id": "mvy2ox4jzuo5b104",
+    "date": "2026-10-30",
+    "startedAt": 1793385540000,
+    "title": "INTERMEDIATE · Тренировка C",
+    "source": "program",
+    "ref": {
+     "prog": "intermediate",
+     "idx": 2,
+     "w": "C"
+    },
+    "durationSec": 2340,
+    "items": [
+     {
+      "ex": "pause",
+      "sets": [
+       {
+        "reps": 4,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 4,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 4,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 4,
+        "weight": 0,
+        "done": true
+       }
+      ]
+     },
+     {
+      "ex": "close",
+      "sets": [
+       {
+        "reps": 6,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 6,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 5,
+        "weight": 0,
+        "done": true
+       }
+      ]
+     },
+     {
+      "ex": "towel",
+      "sets": [
+       {
+        "time": 34,
+        "done": true
+       },
+       {
+        "time": 32,
+        "done": true
+       },
+       {
+        "time": 35,
+        "done": true
+       }
+      ]
+     },
+     {
+      "ex": "pushup",
+      "sets": [
+       {
+        "reps": 13,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 13,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 13,
+        "weight": 0,
+        "done": true
+       }
+      ]
+     },
+     {
+      "ex": "facepull",
+      "sets": [
+       {
+        "reps": 16,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 16,
+        "weight": 0,
+        "done": true
+       }
+      ]
+     }
+    ],
+    "feel": 3,
+    "pain": false,
+    "light": false,
+    "notes": "",
+    "completed": true,
+    "warmup": true
+   },
+   {
+    "id": "mvy2ox4j0xr16q10",
+    "date": "2026-10-31",
+    "startedAt": 1793448000000,
+    "title": "Быстрые подтягивания",
+    "source": "quick",
+    "ref": null,
+    "durationSec": 0,
+    "items": [
+     {
+      "ex": "pullup",
+      "sets": [
+       {
+        "reps": 3,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 3,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 5,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 3,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 6,
+        "weight": 0,
+        "done": true
+       }
+      ]
+     }
+    ],
+    "feel": 0,
+    "pain": false,
+    "notes": "",
+    "completed": true,
+    "warmup": false
+   },
+   {
+    "id": "mvy2ox4j9c76qmu",
+    "date": "2026-10-29",
+    "startedAt": 1793296800000,
+    "title": "Muscle-Up · Этап 2",
+    "source": "mu",
+    "ref": {
+     "stage": 2
+    },
+    "durationSec": 2460,
+    "items": [
+     {
+      "ex": "explosive",
+      "sets": [
+       {
+        "reps": 3,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 3,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 3,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 2,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 2,
+        "weight": 0,
+        "done": true
+       }
+      ]
+     },
+     {
+      "ex": "ctb",
+      "sets": [
+       {
+        "reps": 3,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 2,
+        "weight": 0,
+        "done": true
+       },
+       {
+        "reps": 2,
+        "weight": 0,
+        "done": true
+       }
+      ]
+     },
+     {
+      "ex": "activehang",
+      "sets": [
+       {
+        "time": 25,
+        "done": true
+       },
+       {
+        "time": 25,
+        "done": true
+       }
+      ]
+     },
+     {
+      "ex": "hollow",
+      "sets": [
+       {
+        "time": 30,
+        "done": true
+       },
+       {
+        "time": 30,
+        "done": true
+       }
+      ]
+     }
+    ],
+    "feel": 4,
+    "pain": false,
+    "notes": "Взрывные пошли выше, грудь почти у перекладины.",
+    "completed": true,
+    "warmup": true
+   }
+  ],
+  "tests": [
+   {
+    "id": "mvy2ox4jco2gxt0",
+    "date": "2026-08-23",
+    "pullups": 5,
+    "hang": 40,
+    "dips": 6
+   },
+   {
+    "id": "mvy2ox4jjnl6bt3",
+    "date": "2026-09-13",
+    "pullups": 7,
+    "hang": 46,
+    "dips": 8
+   },
+   {
+    "id": "mvy2ox4j1bst4t6",
+    "date": "2026-10-04",
+    "pullups": 9,
+    "hang": 52,
+    "dips": 10
+   },
+   {
+    "id": "mvy2ox4ji54ijt9",
+    "date": "2026-10-25",
+    "pullups": 11,
+    "hang": 58,
+    "dips": 12
+   }
+  ],
+  "mu": {
+   "checks": {
+    "s1d": true
+   },
+   "done": {
+    "1": "2026-10-25"
+   }
+  },
+  "custom": [
+   {
+    "id": "mvy2ox4jzal6h10",
+    "name": "Хват и вис",
+    "items": [
+     {
+      "ex": "hang",
+      "sets": 3,
+      "reps": 5,
+      "time": 30,
+      "rest": 60,
+      "w": 0
+     },
+     {
+      "ex": "activehang",
+      "sets": 3,
+      "reps": 5,
+      "time": 20,
+      "rest": 60,
+      "w": 0
+     },
+     {
+      "ex": "flexhang",
+      "sets": 3,
+      "reps": 5,
+      "time": 15,
+      "rest": 90,
+      "w": 0
+     },
+     {
+      "ex": "towel",
+      "sets": 2,
+      "reps": 5,
+      "time": 15,
+      "rest": 90,
+      "w": 0
+     }
+    ],
+    "created": "2026-08-31"
+   },
+   {
+    "id": "mvy2ox4j9ueau17",
+    "name": "Кор для Muscle-Up",
+    "items": [
+     {
+      "ex": "hollow",
+      "sets": 3,
+      "reps": 5,
+      "time": 30,
+      "rest": 60,
+      "w": 0
+     },
+     {
+      "ex": "kneeraise",
+      "sets": 3,
+      "reps": 10,
+      "time": 20,
+      "rest": 60,
+      "w": 0
+     },
+     {
+      "ex": "lsit",
+      "sets": 3,
+      "reps": 5,
+      "time": 10,
+      "rest": 90,
+      "w": 0
+     },
+     {
+      "ex": "plank",
+      "sets": 2,
+      "reps": 5,
+      "time": 45,
+      "rest": 60,
+      "w": 0
+     }
+    ],
+    "created": "2026-08-31"
+   }
+  ],
+  "plan": {
+   "2026-10-19": [
+    {
+     "id": "mvy2ox4jg8xo0-13",
+     "kind": "program",
+     "prog": "intermediate",
+     "idx": 0,
+     "title": "INTERMEDIATE · Тренировка A",
+     "done": true
+    }
+   ],
+   "2026-10-21": [
+    {
+     "id": "mvy2ox4jy7bcp-11",
+     "kind": "program",
+     "prog": "intermediate",
+     "idx": 1,
+     "title": "INTERMEDIATE · Тренировка B",
+     "done": true
+    }
+   ],
+   "2026-10-23": [
+    {
+     "id": "mvy2ox4ji1919-9",
+     "kind": "program",
+     "prog": "intermediate",
+     "idx": 2,
+     "title": "INTERMEDIATE · Тренировка C",
+     "done": true
+    }
+   ],
+   "2026-10-26": [
+    {
+     "id": "mvy2ox4j7khaj-6",
+     "kind": "program",
+     "prog": "intermediate",
+     "idx": 1,
+     "title": "INTERMEDIATE · Тренировка B",
+     "done": true
+    }
+   ],
+   "2026-10-28": [
+    {
+     "id": "mvy2ox4j2kt8s-4",
+     "kind": "program",
+     "prog": "intermediate",
+     "idx": 2,
+     "title": "INTERMEDIATE · Тренировка C",
+     "done": true
+    }
+   ],
+   "2026-10-30": [
+    {
+     "id": "mvy2ox4jmbxyx-2",
+     "kind": "program",
+     "prog": "intermediate",
+     "idx": 0,
+     "title": "INTERMEDIATE · Тренировка A",
+     "done": true
+    }
+   ],
+   "2026-11-02": [
+    {
+     "id": "mvy2ox4j5lzqr1",
+     "kind": "program",
+     "prog": "intermediate",
+     "idx": 1,
+     "title": "INTERMEDIATE · Тренировка B",
+     "done": false
+    }
+   ],
+   "2026-11-04": [
+    {
+     "id": "mvy2ox4jxc5dh3",
+     "kind": "program",
+     "prog": "intermediate",
+     "idx": 2,
+     "title": "INTERMEDIATE · Тренировка C",
+     "done": false
+    }
+   ],
+   "2026-11-06": [
+    {
+     "id": "mvy2ox4ja2bz25",
+     "kind": "program",
+     "prog": "intermediate",
+     "idx": 0,
+     "title": "INTERMEDIATE · Тренировка A",
+     "done": false
+    }
+   ],
+   "2026-11-09": [
+    {
+     "id": "mvy2ox4jf1u768",
+     "kind": "program",
+     "prog": "intermediate",
+     "idx": 2,
+     "title": "INTERMEDIATE · Тренировка C",
+     "done": false
+    }
+   ],
+   "2026-11-11": [
+    {
+     "id": "mvy2ox4j9xhvb10",
+     "kind": "program",
+     "prog": "intermediate",
+     "idx": 0,
+     "title": "INTERMEDIATE · Тренировка A",
+     "done": false
+    }
+   ],
+   "2026-11-13": [
+    {
+     "id": "mvy2ox4jmpf4s12",
+     "kind": "program",
+     "prog": "intermediate",
+     "idx": 1,
+     "title": "INTERMEDIATE · Тренировка B",
+     "done": false
+    }
+   ]
+  },
+  "ach": {
+   "first": "2026-11-01",
+   "w10": "2026-11-01",
+   "max1": "2026-11-01",
+   "max5": "2026-11-01",
+   "max10": "2026-11-01",
+   "t100": "2026-11-01",
+   "t1000": "2026-11-01",
+   "str4": "2026-11-01",
+   "dips10": "2026-11-01",
+   "mu1": "2026-11-01",
+   "goal7": "2026-11-01",
+   "custom": "2026-11-01",
+   "tester": "2026-11-01",
+   "tester3": "2026-11-01",
+   "planner": "2026-11-01",
+   "warm10": "2026-11-01",
+   "early": "2026-11-01"
+  },
+  "daily": {},
+  "progress": {
+   "intermediate": {
+    "next": 0,
+    "adj": {
+     "A:2": 1,
+     "B:2": 1,
+     "C:0": 1
+    }
+   }
+  },
+  "ui": {
+   "tip": 3,
+   "planCount": 12
+  }
+ },
+ "_fixture": "Generated by PULLUP PRO 1.0 (legacy/v1) demo-data generator for automated import tests — not real training data"
+}

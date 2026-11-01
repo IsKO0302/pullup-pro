@@ -1,0 +1,10 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "baseUrl": "../..",
+    "types": ["vite/client"],
+    "strict": false,
+    "noImplicitAny": false
+  },
+  "include": ["src/**/*.ts", "vite.config.ts"]
+}

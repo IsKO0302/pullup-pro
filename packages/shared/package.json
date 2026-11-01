@@ -1,0 +1,14 @@
+{
+  "name": "@pullup/shared",
+  "version": "2.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Shared domain model, training catalog and business logic (web, PWA, Telegram Mini App, API, bot)",
+  "exports": {
+    ".": "./src/index.ts",
+    "./*": "./src/*.ts"
+  },
+  "dependencies": {
+    "zod": "^4.6.7"
+  }
+}

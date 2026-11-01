@@ -1,0 +1,46 @@
+{
+  "name": "pullup-pro",
+  "version": "2.0.0",
+  "private": true,
+  "description": "PULLUP PRO 2.0 — ISA Personal fitness ecosystem: web app, PWA, Telegram Mini App, sync API and Telegram bot",
+  "type": "module",
+  "workspaces": [
+    "packages/shared",
+    "packages/db",
+    "apps/web",
+    "apps/api",
+    "apps/telegram-bot"
+  ],
+  "engines": {
+    "node": ">=22.12"
+  },
+  "scripts": {
+    "dev": "npm run dev -w @pullup/web",
+    "dev:api": "npm run dev -w @pullup/api",
+    "dev:bot": "npm run dev -w @pullup/telegram-bot",
+    "build": "npm run build -w @pullup/web && npm run build -w @pullup/api && npm run build -w @pullup/telegram-bot",
+    "build:web": "npm run build -w @pullup/web",
+    "preview": "npm run preview -w @pullup/web",
+    "start:api": "npm run start -w @pullup/api",
+    "start:bot": "npm run start -w @pullup/telegram-bot",
+    "typecheck": "tsc -p packages/shared && tsc -p packages/db && tsc -p apps/web && tsc -p apps/api && tsc -p apps/telegram-bot && tsc -p tests",
+    "db:migrate": "npm run migrate -w @pullup/db",
+    "test": "vitest run",
+    "test:unit": "vitest run --project unit",
+    "test:integration": "vitest run --project integration",
+    "pretest:e2e": "npm run build:web && npm run build -w @pullup/api",
+    "test:e2e": "playwright test",
+    "test:all": "npm run typecheck && npm run test && npm run test:e2e",
+    "docs:sources": "tsx scripts/docs-sources.ts"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.63.0",
+    "@types/node": "^24.0.0",
+    "@types/pg": "^8.23.1",
+    "esbuild": "^0.28.2",
+    "tsx": "^4.23.15",
+    "typescript": "5.9.3",
+    "vite": "^8.3.5",
+    "vitest": "^5.0.5"
+  }
+}

@@ -1,0 +1,8 @@
+<!DOCTYPE html><html lang="ru"><head><meta charset="utf-8"><title>MM QA</title></head><body style="padding:16px"><div id="g" style="display:grid;grid-template-columns:repeat(4,1fr);gap:12px"></div>
+<script type="module">
+import '../src/styles/app.css';
+import { muscleMap } from '../src/components/musclemap';
+import { EX } from '@pullup/shared/catalog/exercises';
+const ids = (new URLSearchParams(location.search).get('k') || 'pullup,pushup,lateral_raise,squat,plank,glute_bridge,dips,hang_legraise').split(',');
+document.getElementById('g').innerHTML = ids.map(id => { const e = EX.find(x => x.id === id); return `<div class="card"><b>${e.name}</b>${muscleMap(e.primary, e.secondary)}</div>`; }).join('');
+</script></body></html>

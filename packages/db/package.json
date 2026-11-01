@@ -1,0 +1,17 @@
+{
+  "name": "@pullup/db",
+  "version": "2.0.0",
+  "private": true,
+  "type": "module",
+  "description": "PostgreSQL access layer: migrations, repositories, sync storage",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "migrate": "tsx --env-file-if-exists=../../.env src/migrate-cli.ts"
+  },
+  "dependencies": {
+    "@pullup/shared": "2.0.0",
+    "pg": "^8.23.1"
+  }
+}
